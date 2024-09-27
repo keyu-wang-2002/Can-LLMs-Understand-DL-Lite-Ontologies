@@ -1,0 +1,30 @@
+AnatomicalStructure ⊑ BiologicalEntity
+∃partOf ⊑ AnatomicalStructure
+∃partOf ⊑ Organ ⊓ AnatomicalStructure
+Organ ⊑ ¬AnatomicalStructure
+∃isConnectedTo ⊑ Organ
+AnatomicalStructure ⊑ ∃partOf
+isConnectedTo ⊑ BodyCavity
+∃encloses ⊑ BodyCavity
+∃encloses ⊑ AnatomicalStructure ⊓ BodyCavity
+AnatomicalStructure ⊑ ¬BodyCavity
+∃isEnclosedBy ⊑ AnatomicalStructure
+BodyCavity ⊑ ∃encloses
+isEnclosedBy ⊑ Region
+∃overlaps ⊑ Region
+∃overlaps ⊑ Region ⊓ AnatomicalStructure
+Region ⊑ ¬AnatomicalStructure
+∃isOverlappedBy ⊑ Region
+AnatomicalStructure ⊑ ∃overlaps
+isOverlappedBy ⊑ SpatialConcept
+∃crosses ⊑ SpatialConcept
+∃crosses ⊑ SpatialConcept ⊓ Region
+SpatialConcept ⊑ ¬Region
+∃isCrossedBy ⊑ SpatialConcept
+Region ⊑ ∃crosses
+isCrossedBy ⊑ Plane
+∃adjacentTo ⊑ Plane
+∃adjacentTo ⊑ Plane ⊓ SpatialConcept
+Plane ⊑ ¬SpatialConcept
+∃isAdjacentTo ⊑ Plane
+SpatialConcept ⊑ ∃adjacentTo

@@ -1,0 +1,303 @@
+Classes
+
+Ability
+Ability ⊑ ∃isAffectedBy.Disability
+Ability ⊑ Thing
+Ability ⊑ ∃isAssistedBy.Device
+Ability ⊑ ¬Disability
+Ability ⊑ ¬Device
+
+Achondroplasia
+Achondroplasia ⊑ PhysicalDisability
+
+Amputation
+Amputation ⊑ PhysicalDisability
+
+AssistiveDevice
+AssistiveDevice ⊑ Device
+AssistiveDevice ⊑ ∃assistsWith.Ability
+
+Autism
+Autism ⊑ MentalDisability
+
+BatteryPowered_Wheelchair
+BatteryPowered_Wheelchair ⊑ Motorised_Wheelchair
+
+Blind
+Blind ⊑ VisualDisability
+
+BrailleAlarmClock
+BrailleAlarmClock ⊑ TactileReading
+
+BraillePillOrganiser
+BraillePillOrganiser ⊑ TactileReading
+
+BrailleWatch
+BrailleWatch ⊑ TactileReading
+
+BrailleWritingDevice
+BrailleWritingDevice ⊑ ∃ assistsWith.SightAbility
+BrailleWritingDevice ⊑ WritingDevice
+
+Cerebral_palsy
+Cerebral_palsy ⊑ PhysicalDisability
+
+Communication_Device
+Communication_Device ⊑ AssistiveDevice
+Communication_Device ⊑ ¬MobilityDevice
+
+Deaf
+Deaf ⊑ HearingDisability
+Deaf ⊑ ∃affects.SpeechAbility
+
+Deafened
+Deafened ⊑ HearingDisability
+
+Device
+Device ⊑ ¬Disability
+Device ⊑ ¬Ability
+
+Disability
+Disability ⊑ Thing
+Disability ⊑ ∃affects.Ability
+Disability ⊑ ¬Device
+Disability ⊑ ¬Ability
+
+Dystonia
+Dystonia ⊑ PhysicalDisability
+
+Epilepsy
+Epilepsy ⊑ MentalDisability
+
+FaceToFaceCommunicationDevice
+FaceToFaceCommunicationDevice ⊑ ∃assistsWith.SpeechAbility
+FaceToFaceCommunicationDevice ⊑ Communication_Device
+
+FaceToFaceCommunicationSoftware
+FaceToFaceCommunicationSoftware ⊑ FaceToFaceCommunicationDevice
+
+Foldable_Wheelchair
+Foldable_Wheelchair ⊑ Manual_Wheelchair
+
+Guillaume_Barre
+Guillaume_Barre ⊑ PhysicalDisability
+
+Hard_of_hearing
+Hard_of_hearing ⊑ HearingDisability
+
+Hear
+Hear ⊑ HearingAbility
+
+Hear_partially
+Hear_partially ⊑ HearingAbility
+
+HearingAbility
+HearingAbility ⊑ SensoryAbility
+
+HearingDisability
+HearingDisability ⊑ ∃ affects.HearingAbility
+HearingDisability ⊑ Disability
+HearingDisability ⊑ ¬VisualDisability
+HearingDisability ⊑ ¬MentalDisability
+HearingDisability ⊑ ¬SpeechDisability
+HearingDisability ⊑ ¬PhysicalDisability
+
+Hemiplegia
+Hemiplegia ⊑ PhysicalDisability
+
+IntellectualDisability
+IntellectualDisability ⊑ MentalDisability
+
+Kyphosis
+Kyphosis ⊑ PhysicalDisability
+
+LightweightFoldable_Wheelchair
+LightweightFoldable_Wheelchair ⊑ Lightweight_Wheelchair
+LightweightFoldable_Wheelchair ⊑ Foldable_Wheelchair
+
+Lightweight_Wheelchair
+Lightweight_Wheelchair ⊑ Manual_Wheelchair
+
+LimbMobility
+LimbMobility ⊑ MovementAbility
+
+ListenDevice
+ListenDevice ⊑ ∃ assistsWith HearingAbility
+ListenDevice ⊑ Communication_Device
+
+Little_or_No_Speech
+Little_or_No_Speech ⊑ ∃affects.SpeechAbility
+Little_or_No_Speech ⊑ SpeechDisability
+
+LowVision
+LowVision ⊑ VisualDisability
+
+LowerLimbMobility
+LowerLimbMobility ⊑ LimbMobility
+LowerLimbMobility ⊑ ¬ UpperLimbMobility
+
+Manual_Wheelchair
+Manual_Wheelchair ⊑ ∃requiresAbility.UpperLimbMobility
+Manual_Wheelchair ⊑ ∃assistsWith.LowerLimbMobility
+Manual_Wheelchair ⊑ Wheelchair
+Manual_Wheelchair ⊑ ¬Motorised_Wheelchair
+
+MentalDisability
+MentalDisability ⊑ Disability
+MentalDisability ⊑ ¬PhysicalDisability
+MentalDisability ⊑ ¬HearingDisability
+MentalDisability ⊑ ¬VisualDisability
+MentalDisability ⊑ ¬SpeechDisability
+
+MobilityDevice
+MobilityDevice ⊑ AssistiveDevice
+MobilityDevice ⊑ ∃assistsWith.MovementAbility
+MobilityDevice ⊑ ¬Communication_Device
+
+Motorised_Wheelchair
+Motorised_Wheelchair ⊑ ∃assistsWith.UpperLimbMobility
+Motorised_Wheelchair ⊑ ∃assistsWith.LowerLimbMobility
+Motorised_Wheelchair ⊑ Wheelchair
+Motorised_Wheelchair ⊑ ¬Manual_Wheelchair
+
+MovementAbility
+MovementAbility ⊑ PhysicalAbility
+
+Multiple_sclerosis
+Multiple_sclerosis ⊑ PhysicalDisability
+
+Muscular_dystrophy
+Muscular_dystrophy ⊑ PhysicalDisability
+
+Osteogensis_Imperfecta
+Osteogensis_Imperfecta ⊑ PhysicalDisability
+
+Paraplegia
+Paraplegia ⊑ PhysicalDisability
+Paraplegia ⊑ ∃ affects LowerLimbMobility
+
+PhysicalAbility
+PhysicalAbility ⊑ Ability
+PhysicalAbility ⊑ ¬SpeechAbility
+PhysicalAbility ⊑ ¬SensoryAbility
+
+PhysicalDisability
+PhysicalDisability ⊑ ∃affects.PhysicalAbility
+PhysicalDisability ⊑ Disability
+PhysicalDisability ⊑ ¬MentalDisability
+PhysicalDisability ⊑ ¬SpeechDisability
+PhysicalDisability ⊑ ¬VisualDisability
+PhysicalDisability ⊑ ¬HearingDisability
+
+Poliomyelitis
+Poliomyelitis ⊑ PhysicalDisability
+
+Quadriplegia
+Quadriplegia ⊑ ∃affects.LowerLimbMobility
+Quadriplegia ⊑ PhysicalDisability
+Quadriplegia ⊑ ∃affects.UpperLimbMobility
+
+Reach
+Reach ⊑ MovementAbility
+
+ReadingDevice
+ReadingDevice ⊑ ∃assistsWith.SightAbility
+ReadingDevice ⊑ Communication_Device
+
+Scoliosis
+Scoliosis ⊑ PhysicalDisability
+
+See
+See ⊑ SightAbility
+
+See_partially
+See_partially ⊑ SightAbility
+
+SensoryAbility
+SensoryAbility ⊑ Ability
+SensoryAbility ⊑ ¬SpeechAbility
+SensoryAbility ⊑ ¬PhysicalAbility
+
+SightAbility
+SightAbility ⊑ SensoryAbility
+
+SpeechAbility
+SpeechAbility ⊑ Ability
+SpeechAbility ⊑ ¬PhysicalAbility
+SpeechAbility ⊑ ¬SensoryAbility
+
+SpeechDevice
+SpeechDevice ⊑ ∃assistsWith.SpeechAbility
+SpeechDevice ⊑ Communication_Device
+
+SpeechDisability
+SpeechDisability ⊑ Disability
+SpeechDisability ⊑ ¬PhysicalDisability
+SpeechDisability ⊑ ¬HearingDisability
+SpeechDisability ⊑ ¬VisualDisability
+SpeechDisability ⊑ ¬MentalDisability
+
+Spina_Bifida
+Spina_Bifida ⊑ PhysicalDisability
+
+Stuttering
+Stuttering ⊑ SpeechDisability
+
+SymbolBoard
+SymbolBoard ⊑ FaceToFaceCommunicationDevice
+
+TactileAbility
+TactileAbility ⊑ SensoryAbility
+
+TactileReading
+TactileReading ⊑ ∃assistsWith.SightAbility
+TactileReading ⊑ ReadingDevice
+TactileReading ⊑ ∃requiresAbility.TactileAbility
+
+TalkingReading
+TalkingReading ⊑ ∃assistsWith.SightAbility
+TalkingReading ⊑ ReadingDevice
+TalkingReading ⊑ ∃requiresAbility.HearingAbility
+
+Talking_Thermometer
+Talking_Thermometer ⊑ TalkingReading
+
+TelephoneAid
+TelephoneAid ⊑ ListenDevice
+TelephoneAid ⊑ SpeechDevice
+
+Thing
+
+UpperLimbMobility
+UpperLimbMobility ⊑ LimbMobility
+UpperLimbMobility ⊑ ¬LowerLimbMobility
+
+VisualDisability
+VisualDisability ⊑ Disability
+VisualDisability ⊑ ¬HearingDisability
+VisualDisability ⊑ ¬PhysicalDisability
+VisualDisability ⊑ ¬SpeechDisability
+VisualDisability ⊑ ¬MentalDisability
+
+Wheelchair
+Wheelchair ⊑ MobilityDevice
+Wheelchair ⊑ ∃assistsWith.LimbMobility
+
+WritingDevice
+WritingDevice ⊑ Communication_Device
+
+Object properties
+affects
+isAffectedBy ≡ affects⁻
+assistsWith
+isAssistedBy ≡ assistsWith⁻
+isAffectedBy
+isAffectedBy ≡ affects⁻
+isAssistedBy
+isAssistedBy ≡ assistsWith⁻
+requiresAbility
+
+Data properties
+Individuals
+Datatypes
+string

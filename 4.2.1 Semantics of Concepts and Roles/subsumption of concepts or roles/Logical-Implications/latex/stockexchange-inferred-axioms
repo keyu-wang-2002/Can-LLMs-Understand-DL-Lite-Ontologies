@@ -1,0 +1,64 @@
+\documentclass{article}
+\parskip 0pt
+\parindent 0pt
+\oddsidemargin 0cm
+\textwidth 19cm
+\begin{document}
+
+\subsection*{Classes}
+
+\subsubsection*{Acquisition}
+
+Acquisition~\ensuremath{\sqsubseteq}~Transaction~
+
+\subsubsection*{Company}
+
+Company~\ensuremath{\sqsubseteq}~LegalPerson~
+
+\subsubsection*{Dealer}
+
+Dealer~\ensuremath{\sqsubseteq}~StockBroker~
+
+\subsubsection*{FinantialInstrument}
+
+\subsubsection*{Investor}
+
+Investor~\ensuremath{\sqsubseteq}~Person~
+
+\subsubsection*{LegalPerson}
+
+LegalPerson~\ensuremath{\sqsubseteq}~Person~
+
+\subsubsection*{Offer}
+
+Offer~\ensuremath{\sqsubseteq}~Transaction~
+
+\subsubsection*{Person}
+
+\subsubsection*{PhysicalPerson}
+
+PhysicalPerson~\ensuremath{\sqsubseteq}~Person~
+
+\subsubsection*{Stock}
+
+Stock~\ensuremath{\sqsubseteq}~FinantialInstrument~
+
+\subsubsection*{StockBroker}
+
+StockBroker~\ensuremath{\sqsubseteq}~StockExchangeMember~
+
+\subsubsection*{StockExchangeMember}
+
+StockExchangeMember~\ensuremath{\sqsubseteq}~Person~
+
+\subsubsection*{StockTrader}
+
+StockTrader~\ensuremath{\sqsubseteq}~StockBroker~
+
+\subsubsection*{Trader}
+
+Trader~\ensuremath{\sqsubseteq}~StockBroker~
+
+\subsubsection*{Transaction}
+
+\section*{Object properties}\section*{Data properties}\section*{Individuals}\section*{Datatypes}\end{document}

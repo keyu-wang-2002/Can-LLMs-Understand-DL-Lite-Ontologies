@@ -1,0 +1,60 @@
+MarineComponent ⊑ ¬MarineSystem
+∃∃formsPartOf ⊑ MarineStructure
+MarineStructure ⊑ ¬MarineEntity¬
+MarineObject ⊑ ¬MarineComponent
+∃hasPart ⊑ Organism ⊓ MarineEntity
+∃comprises⁻ ⊑ ⊓ MarineComponent 
+MarineStructure⁻ ⊑ ∃isPartOf
+MarineStructure ⊑ ∃isPartOf
+MarineObject ⊑ ¬MarineComponent¬
+∃comprises ⊑ MarineComponent
+Organism ⊑ ¬MarineEntity
+∃isPartOf ⊑ MarineSystem
+∃isPartOf ⊑ MarineSystem ⊓ MarineStructure
+∃hasPart ⊑ MarineEntity
+MarineEntity ⊑ Organism
+MarineSystem ⊑ ¬MarineStructure¬
+∃contains⁻ ⊑ MarineObject
+isComprisedBy ⊑ MarineObject
+MarineSystem ⊑ ∃∃comprises
+∃isComposedOf ⊑ MarineStructure ⊓ MarineEntity
+isComprisedBy ⊑ ⁻MarineObject
+MarineEntity ⊑⁻ Organism
+∃isPartOf ⊑ Organism⁻
+∃⁻consistsOf ⊑ MarineSystem
+∃isComposedOf ⊑ MarineStructure
+formsPartOf ⊑ MarineSystem
+MarineStructure ⊑ ¬MarineEntity
+Organism ⊑ ¬MarineEntity¬
+isPartOf ⊑ ⁻MarineStructure
+∃formsPartOf ⊑ MarineStructure
+consistsOf ⊑⁻ MarineComponent
+MarineComponent⁻ ⊑ ∃isLocatedIn
+∃consistsOf ⊑ MarineSystem
+MarineComponent ⊑ ∃isLocatedIn
+∃isLocatedIn ⊑ MarineObject⁻
+∃contains ⊑ MarineObject
+MarineSystem ⊑ ∃comprises
+∃isComposedOf ⊓ ⊑ MarineStructure 
+∃isComposedOf ⊑ MarineStructure⁻
+MarineEntity ⊑ ∃hasPart
+∃isLocatedIn ⊑ MarineObject
+∃isLocatedIn ⊑ MarineObject ⊓ MarineComponent
+MarineSystem ⊑ ¬MarineStructure
+∃isLocatedIn ⊑ MarineObject ⊓
+MarineComponent ⊑ ¬MarineSystem¬
+∃∃isComprisedBy ⊑ MarineComponent
+∃isPartOf ⊑ Organism
+MarineEntity ⊑ ∃isComposedOf
+formsPartOf ⊑ MarineSystem∃
+∃hasPart ⊑ Organism ¬⊓ MarineEntity
+∃isComprisedBy ⊑ MarineComponent
+isPartOf ⊑ MarineStructure
+∃isPartOf ⊑ MarineSystem ⊓
+∃∃hasPart ⊑ MarineEntity
+∃isPartOf∃ ⊑ MarineSystem
+∃¬isLocatedIn ⊑ MarineObject 
+∃comprises ⊑ MarineComponent ⊓ MarineSystem
+consistsOf ⊑ MarineComponent
+MarineEntity ⊑ ∃∃hasPart
+MarineEntity ⊑ ∃∃isComposedOf

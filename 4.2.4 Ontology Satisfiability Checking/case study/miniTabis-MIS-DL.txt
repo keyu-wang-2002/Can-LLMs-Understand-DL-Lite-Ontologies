@@ -1,0 +1,6 @@
+MIS <1>
+physical ⊑ ¬structure
+part-of-physical-structure ⊑ physical-structure
+part-of-physical-structure_node : part-of-physical-structure
+physical-structure ⊑ physical ⊓ structure
+

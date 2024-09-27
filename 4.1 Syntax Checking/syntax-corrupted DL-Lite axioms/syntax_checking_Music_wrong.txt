@@ -1,0 +1,30 @@
+MusicalWork ⊑⁻ CreativeWork	invalid inverse
+∃∃hasGenre ⊑ MusicalWork	invalid quantifiers
+∃hasGenre ⊑ Genre¬ ⊓ MusicalWork	invalid negation
+Genre ⊑ ¬MusicalWork¬	invalid negation
+∃⁻isGenreOf ⊑ Genre	invalid inverse
+MusicalWork ⊑ ∃∃hasGenre	invalid quantifiers
+isGenreOf ⊑⁻ MusicalExpression	invalid inverse
+∃hasExpression⁻ ⊑ MusicalExpression ⊓	invalid conjunction
+MusicalExpression ⊑ ¬MusicalWork¬	invalid negation
+∃⁻isExpressionOf ⊑ MusicalExpression	invalid inverse
+MusicalWork ⊑ ∃∃hasExpression	invalid quantifiers
+isExpressionOf ⊑⁻ Performance	invalid inverse
+∃hasPerformer¬ ⊑ Performance ⊓ MusicalExpression	invalid negation
+Performance ⊑ ¬¬MusicalExpression	invalid negation
+∃isPerformedBy ⊑ Performance⁻ 	invalid inverse
+MusicalExpression⁻ ⊑ ∃hasPerformer	invalid inverse
+isPerformedBy ⊑ ⁻Musician	invalid inverse
+∃isMemberOf ⊑ Musician ⊓⁻ Performance	invalid inverse
+Musician ⊑ ¬Performance¬	invalid negation
+∃hasMember ⊑ Musician⁻	invalid inverse
+Performance⁻ ⊑ ∃isMemberOf	invalid inverse
+⁻hasMember ⊑ Ensemble	invalid inverse
+∃hasPart⁻ ⊑ Ensemble ⊓	invalid conjunction
+Ensemble ⊑ ¬Performance¬	invalid negation
+∃⁻isPartOf ⊑ Ensemble	invalid inverse
+Performance⁻ ⊑ ∃hasPart	invalid inverse
+∃hasPart ⊑ Ensemble∃	invalid quantifiers
+∃isPartOf ¬⊑ ¬Ensemble	invalid negation
+MusicalWork ⊑ ∃hasPart∃	invalid quantifiers
+Ensemble⁻ ⊑ ∃isPartOf	invalid inverse

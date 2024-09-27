@@ -1,0 +1,30 @@
+MarineEntity ⊑ Organism
+∃hasPart ⊑ MarineEntity
+∃hasPart ⊑ Organism ⊓ MarineEntity
+Organism ⊑ ¬MarineEntity
+∃isPartOf ⊑ Organism
+MarineEntity ⊑ ∃hasPart
+isPartOf ⊑ MarineStructure
+∃isComposedOf ⊑ MarineStructure
+∃isComposedOf ⊑ MarineStructure ⊓ MarineEntity
+MarineStructure ⊑ ¬MarineEntity
+∃formsPartOf ⊑ MarineStructure
+MarineEntity ⊑ ∃isComposedOf
+formsPartOf ⊑ MarineSystem
+∃isPartOf ⊑ MarineSystem
+∃isPartOf ⊑ MarineSystem ⊓ MarineStructure
+MarineSystem ⊑ ¬MarineStructure
+∃consistsOf ⊑ MarineSystem
+MarineStructure ⊑ ∃isPartOf
+consistsOf ⊑ MarineComponent
+∃comprises ⊑ MarineComponent
+∃comprises ⊑ MarineComponent ⊓ MarineSystem
+MarineComponent ⊑ ¬MarineSystem
+∃isComprisedBy ⊑ MarineComponent
+MarineSystem ⊑ ∃comprises
+isComprisedBy ⊑ MarineObject
+∃isLocatedIn ⊑ MarineObject
+∃isLocatedIn ⊑ MarineObject ⊓ MarineComponent
+MarineObject ⊑ ¬MarineComponent
+∃contains ⊑ MarineObject
+MarineComponent ⊑ ∃isLocatedIn

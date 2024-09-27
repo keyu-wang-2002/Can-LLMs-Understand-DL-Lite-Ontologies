@@ -1,0 +1,30 @@
+MusicalWork ⊑ CreativeWork
+∃hasGenre ⊑ MusicalWork
+∃hasGenre ⊑ Genre ⊓ MusicalWork
+Genre ⊑ ¬MusicalWork
+∃isGenreOf ⊑ Genre
+MusicalWork ⊑ ∃hasGenre
+isGenreOf ⊑ MusicalExpression
+∃hasExpression ⊑ MusicalExpression
+∃hasExpression ⊑ MusicalExpression ⊓ MusicalWork
+MusicalExpression ⊑ ¬MusicalWork
+∃isExpressionOf ⊑ MusicalExpression
+MusicalWork ⊑ ∃hasExpression
+isExpressionOf ⊑ Performance
+∃hasPerformer ⊑ Performance
+∃hasPerformer ⊑ Performance ⊓ MusicalExpression
+Performance ⊑ ¬MusicalExpression
+∃isPerformedBy ⊑ Performance
+MusicalExpression ⊑ ∃hasPerformer
+isPerformedBy ⊑ Musician
+∃isMemberOf ⊑ Musician
+∃isMemberOf ⊑ Musician ⊓ Performance
+Musician ⊑ ¬Performance
+∃hasMember ⊑ Musician
+Performance ⊑ ∃isMemberOf
+hasMember ⊑ Ensemble
+∃hasPart ⊑ Ensemble
+∃hasPart ⊑ Ensemble ⊓ Performance
+Ensemble ⊑ ¬Performance
+∃isPartOf ⊑ Ensemble
+Performance ⊑ ∃hasPart

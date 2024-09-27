@@ -1,0 +1,184 @@
+MIS <1>
+Groundnut ⊑ GroceryProduce
+Groundnut ⊑ EdibleTuber
+Groundnut_node : Groundnut
+GroceryProduce ⊑ ¬RootVegetable
+EdibleTuber ⊑ RootVegetable
+
+MIS <2>
+Turnip_node : Turnip
+Turnip ⊑ GroceryProduce
+Turnip ⊑ RootVegetable
+GroceryProduce ⊑ ¬RootVegetable
+
+MIS <3>
+Ginger_node : Ginger
+Ginger ⊑ Spice
+Spice ⊑ ¬Vegetable
+Ginger ⊑ Vegetable
+
+MIS <4>
+Olive_node : Olive
+Olive ⊑ Fruit
+Fruit ⊑ ¬GroceryProduce
+Olive ⊑ GroceryProduce
+
+MIS <5>
+Carrot_node : Carrot
+Carrot ⊑ GroceryProduce
+Carrot ⊑ RootVegetable
+GroceryProduce ⊑ ¬RootVegetable
+
+MIS <6>
+CitrusFruit ⊑ Fruit
+CitrusFruit ⊑ GroceryProduce
+Fruit ⊑ ¬GroceryProduce
+Lime ⊑ CitrusFruit
+Lime_node : Lime
+
+MIS <7>
+Lumber_node : Lumber
+ForestProduct ⊑ ¬ManufacturedProduct
+Lumber ⊑ ManufacturedProduct
+Lumber ⊑ ForestProduct
+
+MIS <8>
+Fruit ⊑ ¬GroceryProduce
+Tomato_node : Tomato
+Tomato ⊑ GroceryProduce
+Tomato ⊑ Fruit
+
+MIS <9>
+Cassava_node : Cassava
+Cassava ⊑ GroceryProduce
+Cassava ⊑ RootVegetable
+GroceryProduce ⊑ ¬RootVegetable
+
+MIS <10>
+MulberryLeaf_node : MulberryLeaf
+MulberryLeaf ⊑ Fodder
+MulberryLeaf ⊑ PlantAgriculturalProduct
+PlantAgriculturalProduct ⊑ AgriculturalProduct
+AgriculturalProduct ⊑ ¬Fodder
+
+MIS <11>
+Alfalfa_node : Alfalfa
+Alfalfa ⊑ Fodder
+Alfalfa ⊑ PlantAgriculturalProduct
+PlantAgriculturalProduct ⊑ AgriculturalProduct
+AgriculturalProduct ⊑ ¬Fodder
+
+MIS <12>
+PotatoTuber_node : PotatoTuber
+PotatoTuber ⊑ EdibleTuber
+PotatoTuber ⊑ GroceryProduce
+GroceryProduce ⊑ ¬RootVegetable
+EdibleTuber ⊑ RootVegetable
+
+MIS <13>
+ForageCrop_node : ForageCrop
+ForageCrop ⊑ PlantAgriculturalProduct
+PlantAgriculturalProduct ⊑ AgriculturalProduct
+ForageCrop ⊑ Fodder
+AgriculturalProduct ⊑ ¬Fodder
+
+MIS <14>
+IndustrialSupply_node : IndustrialSupply
+IndustrialSupply ⊑ CapitalGood
+CapitalGood ⊑ ¬ManufacturedProduct
+IndustrialSupply ⊑ ManufacturedProduct
+
+MIS <15>
+Squash_node : Squash
+GroceryProduce ⊑ ¬Vegetable
+Squash ⊑ GroceryProduce
+Squash ⊑ Vegetable
+
+MIS <16>
+GroceryProduce ⊑ ¬Vegetable
+Cucumber_node : Cucumber
+Cucumber ⊑ Vegetable
+Cucumber ⊑ GroceryProduce
+
+MIS <17>
+SweetPotatoTuber_node : SweetPotatoTuber
+SweetPotatoTuber ⊑ EdibleTuber
+SweetPotatoTuber ⊑ GroceryProduce
+GroceryProduce ⊑ ¬RootVegetable
+EdibleTuber ⊑ RootVegetable
+
+MIS <18>
+YamTuber_node : YamTuber
+YamTuber ⊑ EdibleTuber
+YamTuber ⊑ GroceryProduce
+GroceryProduce ⊑ ¬RootVegetable
+EdibleTuber ⊑ RootVegetable
+
+MIS <19>
+Clover_node : Clover
+Clover ⊑ PlantAgriculturalProduct
+Clover ⊑ Fodder
+PlantAgriculturalProduct ⊑ AgriculturalProduct
+AgriculturalProduct ⊑ ¬Fodder
+
+MIS <20>
+TaroTuber_node : TaroTuber
+TaroTuber ⊑ EdibleTuber
+TaroTuber ⊑ GroceryProduce
+GroceryProduce ⊑ ¬RootVegetable
+EdibleTuber ⊑ RootVegetable
+
+MIS <21>
+HandwovenCarpet_node : HandwovenCarpet
+HandicraftProduct ⊑ ¬ManufacturedProduct
+HandwovenCarpet ⊑ HandicraftProduct
+HandwovenCarpet ⊑ TextileProduct
+TextileProduct ⊑ ManufacturedProduct
+
+MIS <22>
+Cabbage_node : Cabbage
+Cabbage ⊑ GroceryProduce
+Cabbage ⊑ Vegetable
+GroceryProduce ⊑ ¬Vegetable
+
+MIS <23>
+Corn_node : Corn
+GroceryProduce ⊑ ¬Vegetable
+Corn ⊑ Vegetable
+Corn ⊑ GroceryProduce
+
+MIS <24>
+GroceryProduce ⊑ ¬Vegetable
+Eggplant_node : Eggplant
+Eggplant ⊑ GroceryProduce
+Eggplant ⊑ Vegetable
+
+MIS <25>
+GroceryProduce ⊑ ¬Vegetable
+SugarCane_node : SugarCane
+SugarCane ⊑ Vegetable
+SugarCane ⊑ GroceryProduce
+
+MIS <26>
+SweetPepper_node : SweetPepper
+GroceryProduce ⊑ ¬Vegetable
+SweetPepper ⊑ GroceryProduce
+SweetPepper ⊑ Vegetable
+
+MIS <27>
+GreenPepper_node : GreenPepper
+GreenPepper ⊑ Vegetable
+GroceryProduce ⊑ ¬Vegetable
+GreenPepper ⊑ GroceryProduce
+
+MIS <28>
+GroceryProduce ⊑ ¬Vegetable
+LeafyGreenVegetable_node : LeafyGreenVegetable
+LeafyGreenVegetable ⊑ Vegetable
+LeafyGreenVegetable ⊑ GroceryProduce
+
+MIS <29>
+GroceryProduce ⊑ ¬Vegetable
+Cauliflower_node : Cauliflower
+Cauliflower ⊑ GroceryProduce
+Cauliflower ⊑ Vegetable

@@ -1,0 +1,182 @@
+####Social Network Relations (Extracted from FOAF - Friend of a Friend)####
+####      #concept inclusions = 29,  #funct = 1, #inverse roles= 4, #assertions = 102   ##############
+
+
+
+Class: Person
+Class: Organization
+Class: Project
+Class: Skill
+Class: Interest
+Class: Friendship
+Class: Employment
+Class: Collaboration
+Person ⊑ ∃HasSkill.Skill
+Person ⊑ ∃HasInterest.Interest
+Person ⊑ ∃FriendWith.Person
+Person ⊑ ∃WorksAt.Organization
+Person ⊑ ∃ParticipatesIn.Project
+Organization ⊑ ∃Employs.Person
+Organization ⊑ ∃CollaboratesWith.Organization
+Skill ⊑ ∃RequiredBy.Project
+Interest ⊑ ∃SharedBy.Project
+Friendship ⊑ ∃Includes.Person
+Employment ⊑ ∃Includes.Person
+Collaboration ⊑ ∃Includes.Organization
+∃HasSkill⁻ ⊑ Skill
+∃HasInterest⁻ ⊑ Interest
+∃FriendWith⁻ ⊑ Person
+∃WorksAt⁻ ⊑ Organization
+∃ParticipatesIn⁻ ⊑ Project
+∃Employs⁻ ⊑ Person
+∃CollaboratesWith⁻ ⊑ Organization
+∃RequiredBy⁻ ⊑ Project
+∃SharedBy⁻ ⊑ Project
+∃Includes⁻ ⊑ Person
+∃Includes⁻ ⊑ Organization
+Employs⁻ ⊑ WorksAt 
+WorksAt ⊑ Employs⁻
+Includes⁻ ⊑ ParticipatesIn
+ParticipatesIn ⊑ Includes⁻
+Person ⊑ ¬Organization
+Project ⊑ ¬Skill
+(funct WorksAt)
+
+
+Instance: John Type: Person
+Instance: Mary Type: Person
+Instance: Google Type: Organization
+Instance: OpenAI Type: Organization
+Instance: AI_Project Type: Project
+Instance: Programming Type: Skill
+Instance: Robotics Type: Skill
+Instance: Music Type: Interest
+Instance: Friendship1 Type: Friendship
+Instance: Employment1 Type: Employment
+Instance: Collaboration1 Type: Collaboration
+Instance: Alice Type: Person
+Instance: Bob Type: Person
+Instance: Microsoft Type: Organization
+Instance: Facebook Type: Organization
+Instance: SocialMedia_Project Type: Project
+Instance: Design Type: Skill
+Instance: Marketing Type: Skill
+Instance: Sports Type: Interest
+Instance: Friendship2 Type: Friendship
+Instance: Employment2 Type: Employment
+Instance: Collaboration2 Type: Collaboration
+Instance: Sam Type: Person
+Instance: Emma Type: Person
+Instance: Amazon Type: Organization
+Instance: Netflix Type: Organization
+Instance: Entertainment_Project Type: Project
+Instance: Acting Type: Skill
+Instance: Filmmaking Type: Skill
+Instance: Travel Type: Interest
+Instance: Friendship3 Type: Friendship
+Instance: Employment3 Type: Employment
+Instance: Collaboration3 Type: Collaboration
+Instance: Tom Type: Person
+Instance: Kate Type: Person
+Instance: Tesla Type: Organization
+Instance: SpaceX Type: Organization
+Instance: Space_Project Type: Project
+Instance: Physics Type: Skill
+Instance: Mathematics Type: Skill
+Instance: Science Type: Interest
+Instance: Friendship4 Type: Friendship
+Instance: Employment4 Type: Employment
+Instance: Collaboration4 Type: Collaboration
+Instance: Alex Type: Person
+Instance: Chris Type: Person
+Instance: IBM Type: Organization
+Instance: Oracle Type: Organization
+Instance: Software_Project Type: Project
+Instance: Programming2 Type: Skill
+Instance: Database Type: Skill
+Instance: Reading Type: Interest
+Instance: Friendship5 Type: Friendship
+Instance: Employment5 Type: Employment
+HasSkill(John, Programming)
+HasSkill(John, Robotics)
+HasInterest(John, Music)
+FriendWith(John, Mary)
+WorksAt(John, Google)
+ParticipatesIn(John, AI_Project)
+CollaboratesWith(Google, OpenAI)
+RequiredBy(AI_Project, Programming)
+SharedBy(AI_Project, Music)
+Includes(Friendship1, John)
+Includes(Employment1, John)
+Includes(Collaboration1, Google)
+HasSkill(Alice, Design)
+HasSkill(Alice, Marketing)
+HasInterest(Alice, Sports)
+FriendWith(Alice, Bob)
+WorksAt(Alice, Microsoft)
+ParticipatesIn(Alice, SocialMedia_Project)
+CollaboratesWith(Microsoft, Facebook)
+RequiredBy(SocialMedia_Project, Design)
+SharedBy(SocialMedia_Project, Sports)
+Includes(Friendship2, Alice)
+Includes(Employment2, Alice)
+Includes(Collaboration2, Microsoft)
+HasSkill(Sam, Acting)
+HasSkill(Sam, Filmmaking)
+HasInterest(Sam, Travel)
+FriendWith(Sam, Emma)
+ParticipatesIn(Sam, Entertainment_Project)
+Employs(Amazon, Sam)
+CollaboratesWith(Amazon, Netflix)
+RequiredBy(Entertainment_Project, Acting)
+SharedBy(Entertainment_Project, Travel)
+Includes(Friendship3, Sam)
+Includes(Employment3, Sam)
+Includes(Collaboration3, Amazon)
+HasSkill(Tom, Physics)
+HasSkill(Tom, Mathematics)
+HasInterest(Tom, Science)
+FriendWith(Tom, Kate)
+WorksAt(Tom, Tesla)
+ParticipatesIn(Tom, Space_Project)
+CollaboratesWith(Tesla, SpaceX)
+RequiredBy(Space_Project, Physics)
+SharedBy(Space_Project, Science)
+Includes(Friendship4, Tom)
+Includes(Employment4, Tom)
+Includes(Collaboration4, Tesla)
+
+
+
+############## inverse role probing ###################
+Employs(Google, John)
+Employs(Tesla, Tom) 
+Employs(Microsoft, Alice)
+ParticipatesIn(John, Friendship1)
+ParticipatesIn(John, Employment1)
+ParticipatesIn(Google, Collaboration1)
+ParticipatesIn(Alice, Friendship2)
+ParticipatesIn(Alice, Employment2)
+ParticipatesIn(Microsoft, Collaboration2)
+Includes(SocialMedia_Project, Alice)
+Includes(AI_Project, John)
+Includes(Entertainment_Project, Sam)
+Includes(Space_Project, Tom)
+
+
+############## functional role probing ###################
+WorksAt(John, x1)  
+WorksAt(Alice, x2)  
+WorksAt(Tom, x3)   
+
+x1 ≡ Google
+x2 ≡ Microsoft
+x3 ≡ Tesla
+############## inverse functional role probing ###################
+Employs(y1, Sam)  
+
+y1 ≡ Amazon
+
+
+
+

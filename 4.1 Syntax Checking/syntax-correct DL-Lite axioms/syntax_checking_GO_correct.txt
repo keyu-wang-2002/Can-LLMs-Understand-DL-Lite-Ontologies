@@ -1,0 +1,30 @@
+MolecularFunction ⊑ ∃hasPart
+hasPart ⊑ GeneProduct
+∃isInvolvedIn ⊑ Protein
+∃isInvolvedIn ⊑ MacromolecularComplex
+MacromolecularComplex ⊑ ¬Protein
+∃hasComponent ⊑ MacromolecularComplex
+Protein ⊑ ∃isInvolvedIn
+hasComponent ⊑ GeneProduct
+∃occursIn ⊑ BiologicalProcess
+∃occursIn ⊑ MolecularFunction ⊓ BiologicalProcess
+MolecularFunction ⊑ ¬BiologicalProcess
+∃participatesIn ⊑ MolecularFunction
+BiologicalProcess ⊑ ∃occursIn
+participatesIn ⊑ GeneProduct
+∃expresses ⊑ GeneProduct
+∃expresses ⊑ Protein ⊓ GeneProduct
+Protein ⊑ ¬GeneProduct
+∃isExpressedIn ⊑ Protein
+GeneProduct ⊑ ∃expresses
+isExpressedIn ⊑ MacromolecularComplex
+∃bindsTo ⊑ Protein
+∃bindsTo ⊑ GeneProduct ⊓ Protein
+GeneProduct ⊑ ¬Protein
+∃isBoundBy ⊑ GeneProduct
+Protein ⊑ ∃bindsTo
+∃regulates⁻ ⊑ MolecularFunction ⊓ BiologicalProcess
+MolecularFunction ⊑ ¬BiologicalEntity
+∃has_part⁻ ⊑ CellularComponent ⊓ CellularComponent
+∃interacts_with⁻ ⊑ MolecularFunction ⊓ BiologicalEntity
+∃has_synthesized_entity ⊑ BiologicalProcess ⊓ BiologicalEntity

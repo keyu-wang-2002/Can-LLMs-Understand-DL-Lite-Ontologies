@@ -1,0 +1,15 @@
+RedWine ⊑ Wine
+WhiteWine ⊑ Wine
+RedWine ⊑ ¬WhiteWine
+Wine ⊑ ¬Bear
+Wine ⊑ ∃producedBy
+∃producedBy ⊑ Wine
+∃producedBy⁻ ⊑ Winery
+Wine ⊑ ¬Winery
+Beer ⊑ ¬Winery
+(funct producedBy)
+RedWine(wine_1)
+WhiteWine(wine_1)
+WhiteWine(wine_2)
+Beer(wine_3)
+producedBy(wine_3, winr)

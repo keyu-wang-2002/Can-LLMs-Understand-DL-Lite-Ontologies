@@ -1,0 +1,134 @@
+#############Library System (Extracted from the Dublin Core Metadata)###############
+#############  #concept inclusion = 22, #inverse role pairs = 3, functional roles = 0, inverse functional roles = 3, #assertions = 70 ############
+
+Class: Librarian
+Class: Member
+Class: Book
+Class: Journal
+Class: Magazine
+Class: Author
+Class: Publisher
+
+Librarian ⊑ ∃Issues.Book
+Librarian ⊑ ∃Organizes.Journal
+Librarian ⊑ ∃Manages.Magazine
+Member ⊑ ∃Borrows.Book
+Member ⊑ ∃SubscribesTo.Journal
+Author ⊑ ∃Writes.Book
+Publisher ⊑ ∃Publishes.Book
+∃Issues⁻ ⊑ Book
+∃Organizes⁻ ⊑ Journal
+∃Manages⁻ ⊑ Magazine
+∃Borrows⁻ ⊑ Book
+∃SubscribesTo⁻ ⊑ Journal
+∃Writes⁻ ⊑ Author
+∃Publishes⁻ ⊑ Publisher
+Issues⁻ ⊑ IsIssuedBy
+IsIssuedBy ⊑ Issues⁻
+Borrows⁻ ⊑ LendsTo
+LendsTo ⊑ Borrows⁻
+SubscribesTo⁻ ⊑ HasSubscriber
+HasSubscriber ⊑ SubscribesTo⁻
+Librarian ⊑ ¬Member
+Book ⊑ ¬Journal
+(funct Issues⁻)
+(funct Borrows⁻)
+(funct SubscribesTo⁻)
+
+Instance: Tom Type: Librarian
+Instance: Sue Type: Member
+Instance: Book1 Type: Book
+Instance: Journal1 Type: Journal
+Instance: Magazine1 Type: Magazine
+Instance: Author1 Type: Author
+Instance: Publisher1 Type: Publisher
+Instance: Jim Type: Librarian
+Instance: Ann Type: Member
+Instance: Book2 Type: Book
+Instance: Journal2 Type: Journal
+Instance: Magazine2 Type: Magazine
+Instance: Author2 Type: Author
+Instance: Publisher2 Type: Publisher
+Instance: Tim Type: Librarian
+Instance: Amy Type: Member
+Instance: Book3 Type: Book
+Instance: Journal3 Type: Journal
+Instance: Magazine3 Type: Magazine
+Instance: Author3 Type: Author
+Instance: Publisher3 Type: Publisher
+Instance: Tom2 Type: Librarian
+Instance: Sue2 Type: Member
+Instance: Book4 Type: Book
+Instance: Journal4 Type: Journal
+Instance: Magazine4 Type: Magazine
+Instance: Author4 Type: Author
+Instance: Publisher4 Type: Publisher
+Instance: Jim2 Type: Librarian
+Instance: Ann2 Type: Member
+Instance: Book5 Type: Book
+Instance: Journal5 Type: Journal
+Instance: Magazine5 Type: Magazine
+Instance: Author5 Type: Author
+Instance: Publisher5 Type: Publisher
+Issues(Tom, Book1)
+Organizes(Tom, Journal1)
+Manages(Tom, Magazine1)
+Borrows(Sue, Book1)
+SubscribesTo(Sue, Journal1)
+Writes(Author1, Book1)
+Publishes(Publisher1, Book1)
+Issues(Jim, Book2)
+Organizes(Jim, Journal2)
+Manages(Jim, Magazine2)
+Borrows(Ann, Book2)
+SubscribesTo(Ann, Journal2)
+Writes(Author2, Book2)
+Publishes(Publisher2, Book2)
+Issues(Tim, Book3)
+Organizes(Tim, Journal3)
+Manages(Tim, Magazine3)
+Borrows(Amy, Book3)
+SubscribesTo(Amy, Journal3)
+Writes(Author3, Book3)
+Publishes(Publisher3, Book3)
+Issues(Tom2, Book4)
+Organizes(Tom2, Journal4)
+Manages(Tom2, Magazine4)
+Borrows(Sue2, Book4)
+SubscribesTo(Sue2, Journal4)
+Writes(Author4, Book4)
+Publishes(Publisher4, Book4)
+Issues(Jim2, Book5)
+Organizes(Jim2, Journal5)
+Manages(Jim2, Magazine5)
+Borrows(Ann2, Book5)
+SubscribesTo(Ann2, Journal5)
+Writes(Author5, Book5)
+Publishes(Publisher5, Book5)
+
+################################## inverse role probing #########################
+IsIssuedBy(Book1, Tom)
+IsIssuedBy(Book2, Jim)
+IsIssuedBy(Book5, Jim2)
+LendsTo(Book5, Ann2)
+LendsTo(Book4, Sue2)
+HasSubscriber(Journal5, Ann2)
+HasSubscriber(Journal4, Sue2)
+
+
+
+
+############################# inverse functional role ###################
+Borrows(y1, Book5)    
+Borrows(y2, Book4)   
+Borrows(y3, Book1)   
+Issues(y4, Book2)      
+Issues(y5, Book5)      
+SubscribesTo(y6, Journal1)    
+
+y1 ≡ Ann2
+y2 ≡ Sue2
+y3 ≡ Sue
+y4 ≡ Jim
+y5 ≡ Jim2
+y6 ≡ Sue

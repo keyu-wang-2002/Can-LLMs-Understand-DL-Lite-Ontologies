@@ -1,0 +1,60 @@
+Region ⊑ ¬AnatomicalStructure¬
+∃isCrossedBy ⊑ SpatialConcept⁻
+∃isAdjacentTo ⊑ Plane
+∃adjacentTo ⊑ Plane SpatialConcept ⊓
+∃encloses ⊑ AnatomicalStructure ⊓ BodyCavity
+isConnectedTo ⊑ BodyCavity ⊓
+Region ⊑ ∃crosses
+∃overlaps ⊑ Region ⊓ 
+∃crosses ⊑ SpatialConcept
+isOverlappedBy ⊑ SpatialConcept
+AnatomicalStructure ⊑ ∃∃overlaps
+isOverlappedBy ⊑ ⁻SpatialConcept
+∃overlaps ⊑ SpatialConcept Region ⊓
+AnatomicalStructure ⊑ ¬BodyCavity¬
+∃isEnclosedBy ⊑ AnatomicalStructure⁻
+∃isCrossedBy ⊑ Plane⁻
+AnatomicalStructure ⊑ BiologicalEntity
+∃⁻isAdjacentTo ⊑ Plane
+BodyCavity ⊑ ∃encloses
+∃encloses ⊑ BodyCavity
+SpatialConcept⁻ ⊑ ∃adjacentTo
+¬Plane ⊑ SpatialConcept¬
+∃isCrossedBy ⊑ SpatialConcept
+∃encloses ⊑ AnatomicalStructure BodyCavity ⊓
+∃∃partOf ⊑ AnatomicalStructure
+AnatomicalStructure ⊑ ∃∃partOf
+SpatialConcept ⊑ ∃adjacentTo
+∃isOverlappedBy ⊑ Region⁻
+∃adjacentTo ⊑ Plane
+SpatialConcept ⊑ ¬Region¬
+Organ ⊑ ¬AnatomicalStructure ⊓
+∃adjacentTo ⊑ Plane ⊓
+AnatomicalStructure ⊑ ¬BodyCavity
+∃partOf ⊑ AnatomicalStructure
+BodyCavity⁻ ⊑ ∃encloses
+∃encloses¬ ⊑ BodyCavity
+∃isConnectedTo ⊑ Organ⁻
+Plane ⊑ ¬SpatialConcept
+isCrossedBy ⊑ Plane
+∃isEnclosedBy ⊑ AnatomicalStructure
+Region ⊑ ¬AnatomicalStructure
+∃isConnectedTo ⊑ Organ
+Region⁻ ⊑ ∃crosses
+isEnclosedBy ⊑ ⁻Region
+∃isOverlappedBy ⊑ Region
+partOf∃ ⊑ Organ ⊓ AnatomicalStructure
+∃crosses ⊑ SpatialConcept Region ⊓
+Organ ⊑ ¬AnatomicalStructure
+AnatomicalStructure ⊑⁻ BiologicalEntity
+∃crosses ⊑ SpatialConcept ⊓
+∃adjacentTo ⊑ Plane ⊓ SpatialConcept
+∃overlaps ⊑ Region ⊓ AnatomicalStructure
+∃crosses ⊑ SpatialConcept ⊓ Region
+∃partOf ⊑ Organ ⊓ AnatomicalStructure
+∃overlaps ⊑ Region
+AnatomicalStructure ⊑ ∃partOf
+SpatialConcept ⊑ ¬Region
+isConnectedTo ⊑ BodyCavity
+AnatomicalStructure ⊑ ∃overlaps
+isEnclosedBy ⊑ Region

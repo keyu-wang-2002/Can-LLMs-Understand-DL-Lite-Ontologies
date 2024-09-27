@@ -1,0 +1,60 @@
+∃hasPerformer ⊑ Performance
+∃hasPerformer¬ ⊑ Performance ⊓ MusicalExpression
+∃isGenreOf ⊑ Genre
+∃hasGenre ⊑ MusicalWork
+Performance ⊑ ∃isMemberOf
+∃hasPart ⊑ Ensemble
+hasMember ⊑ Ensemble
+isPerformedBy ⊑ Musician
+MusicalWork ⊑ ∃hasPart∃
+∃hasPart ⊑ Ensemble ⊓ Performance
+Genre ⊑ ¬MusicalWork¬
+MusicalExpression ⊑ ∃hasPerformer
+isExpressionOf ⊑ Performance
+∃isMemberOf ⊑ Musician ⊓⁻ Performance
+Ensemble⁻ ⊑ ∃isPartOf
+Musician ⊑ ¬Performance
+∃hasGenre ⊑ Genre ⊓ MusicalWork
+∃hasMember ⊑ Musician
+∃hasExpression ⊑ MusicalExpression
+∃hasExpression⁻ ⊑ MusicalExpression ⊓
+MusicalExpression ⊑ ¬MusicalWork¬
+isGenreOf ⊑ MusicalExpression
+∃hasMember ⊑ Musician⁻
+Genre ⊑ ¬MusicalWork
+MusicalWork ⊑ ∃∃hasExpression
+Ensemble ⊑ ¬Performance
+∃hasGenre ⊑ Genre¬ ⊓ MusicalWork
+MusicalWork ⊑ ∃hasGenre
+Performance ⊑ ∃hasPart
+MusicalWork ⊑ CreativeWork
+∃isExpressionOf ⊑ MusicalExpression
+isPerformedBy ⊑ ⁻Musician
+∃isMemberOf ⊑ Musician
+∃hasExpression ⊑ MusicalExpression ⊓ MusicalWork
+Ensemble ⊑ ¬Performance¬
+Performance ⊑ ¬MusicalExpression
+Performance⁻ ⊑ ∃hasPart
+MusicalWork ⊑ ∃hasExpression
+MusicalExpression ⊑ ¬MusicalWork
+∃isPerformedBy ⊑ Performance
+isExpressionOf ⊑⁻ Performance
+∃isMemberOf ⊑ Musician ⊓ Performance
+Performance ⊑ ¬¬MusicalExpression
+MusicalExpression⁻ ⊑ ∃hasPerformer
+MusicalWork ⊑ ∃∃hasGenre
+∃hasPerformer ⊑ Performance ⊓ MusicalExpression
+∃isPartOf ⊑ Ensemble
+∃⁻isPartOf ⊑ Ensemble
+∃isPerformedBy ⊑ Performance⁻ 
+isGenreOf ⊑⁻ MusicalExpression
+∃isPartOf ¬⊑ ¬Ensemble
+⁻hasMember ⊑ Ensemble
+∃hasPart ⊑ Ensemble∃
+∃hasPart⁻ ⊑ Ensemble ⊓
+MusicalWork ⊑⁻ CreativeWork
+∃⁻isExpressionOf ⊑ MusicalExpression
+Performance⁻ ⊑ ∃isMemberOf
+∃∃hasGenre ⊑ MusicalWork
+∃⁻isGenreOf ⊑ Genre
+Musician ⊑ ¬Performance¬

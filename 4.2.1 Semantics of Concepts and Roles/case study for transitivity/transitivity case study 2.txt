@@ -1,0 +1,36 @@
+TBox
+C1 ⊑ C2
+C2 ⊑ C3
+C3 ⊑ C4
+C4 ⊑ C5
+C3 ⊑ C6
+C6 ⊑ C7
+R1 ⊑ R2
+R2 ⊑ R3
+R3 ⊑ R4
+
+
+Logical Implications:
+C1 ⊑ C3
+C1 ⊑ C4
+C1 ⊑ C5
+C1 ⊑ C6
+C1 ⊑ C7
+C2 ⊑ C3
+C2 ⊑ C4
+C2 ⊑ C5
+C2 ⊑ C6
+C2 ⊑ C7
+C3 ⊑ C5
+C3 ⊑ C6
+C3 ⊑ C7
+R1 ⊑ R3
+R1 ⊑ R4
+R2 ⊑ R4
+
+
+(
+
+)
+
+

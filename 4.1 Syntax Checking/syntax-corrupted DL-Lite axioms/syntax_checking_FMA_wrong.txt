@@ -1,0 +1,30 @@
+AnatomicalStructure ⊑⁻ BiologicalEntity	invalid inverse
+∃∃partOf ⊑ AnatomicalStructure	invalid quantifiers
+partOf∃ ⊑ Organ ⊓ AnatomicalStructure	invalid negation
+Organ ⊑ ¬AnatomicalStructure ⊓	invalid conjunction
+∃isConnectedTo ⊑ Organ⁻	invalid inverse
+AnatomicalStructure ⊑ ∃∃partOf	invalid quantifiers
+isConnectedTo ⊑ BodyCavity ⊓	invalid conjunction
+∃encloses¬ ⊑ BodyCavity	invalid negation
+∃encloses ⊑ AnatomicalStructure BodyCavity ⊓	invalid conjunction
+AnatomicalStructure ⊑ ¬BodyCavity¬	invalid negation
+∃isEnclosedBy ⊑ AnatomicalStructure⁻	invalid inverse
+BodyCavity⁻ ⊑ ∃encloses	invalid inverse
+isEnclosedBy ⊑ ⁻Region	invalid inverse
+∃overlaps ⊑ Region ⊓ 	invalid conjunction
+∃overlaps ⊑ SpatialConcept Region ⊓	invalid conjunction
+Region ⊑ ¬AnatomicalStructure¬	invalid negation
+∃isOverlappedBy ⊑ Region⁻	invalid inverse
+AnatomicalStructure ⊑ ∃∃overlaps	invalid quantifiers
+isOverlappedBy ⊑ ⁻SpatialConcept	invalid inverse
+∃crosses ⊑ SpatialConcept ⊓	invalid conjunction
+∃crosses ⊑ SpatialConcept Region ⊓	invalid conjunction
+SpatialConcept ⊑ ¬Region¬	invalid negation
+∃isCrossedBy ⊑ SpatialConcept⁻	invalid inverse
+Region⁻ ⊑ ∃crosses	invalid inverse
+∃isCrossedBy ⊑ Plane⁻	invalid inverse
+∃adjacentTo ⊑ Plane ⊓	invalid conjunction
+∃adjacentTo ⊑ Plane SpatialConcept ⊓	invalid conjunction
+¬Plane ⊑ SpatialConcept¬	invalid negation
+∃⁻isAdjacentTo ⊑ Plane	invalid inverse
+SpatialConcept⁻ ⊑ ∃adjacentTo	invalid inverse

@@ -1,0 +1,60 @@
+∃expresses ⊑ Protein ⊓ GeneProduct
+∃has_part ⊑ CellularComponent⁻ ⊓ CellularComponent
+participatesIn ⊑ GeneProduct
+∃interacts_with ⊑ MolecularFunction ⊓ BiologicalEntity⁻
+MolecularFunction ⊑ ¬BiologicalProcess¬
+∃expresses ⊑ GeneProduct∃
+participatesIn ⊑ ∃GeneProduct∃
+isExpressedIn ⊑ MacromolecularComplex∃
+GeneProduct ⊑ ¬Protein
+∃regulates⁻ ⊑ MolecularFunction ⊓ BiologicalProcess
+MolecularFunction ⊑ ¬BiologicalEntity¬
+∃occursIn ⊑ MolecularFunction BiologicalProcess ⊓
+∃occursIn∃ ⊑ BiologicalProcess
+∃∃hasComponent ⊑ MacromolecularComplex
+hasPart ⊑ ⁻GeneProduct
+∃has_synthesized_entity ⊑ BiologicalProcess ⊓ BiologicalEntity ⊓
+Protein⁻ ⊑ ∃isInvolvedIn
+MacromolecularComplex ⊑ ¬Protein
+∃bindsTo ⊑ GeneProduct ⊓ Protein
+∃has_synthesized_entity ⊑ BiologicalProcess ⊓ BiologicalEntity
+MolecularFunction⁻ ⊑ ∃hasPart
+∃∃isBoundBy ⊑ GeneProduct
+bindsTo∃ ⊑ Protein
+∃regulates⁻ ⊑ MolecularFunction ⊓ BiologicalProcess ⊓
+∃⁻isInvolvedIn ⊑ Protein
+Protein ⊑ ∃isInvolvedIn
+BiologicalProcess ⊑ ∃∃occursIn
+∃bindsTo ⊑ Protein
+Protein ⊑ ¬GeneProduct
+MolecularFunction ⊑ ¬BiologicalEntity
+∃isInvolvedIn ⊑ Protein
+hasComponent ⊑ GeneProduct
+∃bindsTo ⊑ GeneProduct Protein ⊓
+MacromolecularComplex ⊑ ¬Protein¬
+∃isExpressedIn ⊑ ∃
+isExpressedIn ⊑ MacromolecularComplex
+GeneProduct ⊑ ∃∃expresses
+∃occursIn ⊑ BiologicalProcess
+∃expresses ⊑ GeneProduct
+∃isExpressedIn ⊑ Protein
+∃isBoundBy ⊑ GeneProduct
+∃isInvolvedIn ⊑ MacromolecularComplex
+∃expresses ⊑ Protein ∃ GeneProduct
+∃participatesIn ⊑ MolecularFunction
+∃hasComponent ⊑ MacromolecularComplex
+hasPart ⊑ GeneProduct
+Protein ⊑ ¬GeneProduct¬
+MolecularFunction ⊑ ¬BiologicalProcess
+Protein ⊑ ∃∃bindsTo
+Protein ⊑ ∃bindsTo
+∃∃participatesIn ⊑ MolecularFunction
+∃interacts_with⁻ ⊑ MolecularFunction ⊓ BiologicalEntity
+GeneProduct ⊑ ¬Protein¬
+∃isInvolvedIn ⊑ MacromolecularComplex ⊓
+MolecularFunction ⊑ ∃hasPart
+BiologicalProcess ⊑ ∃occursIn
+GeneProduct ⊑ ∃expresses
+∃has_part⁻ ⊑ CellularComponent ⊓ CellularComponent
+⁻hasComponent ⊑ GeneProduct
+∃occursIn ⊑ MolecularFunction ⊓ BiologicalProcess

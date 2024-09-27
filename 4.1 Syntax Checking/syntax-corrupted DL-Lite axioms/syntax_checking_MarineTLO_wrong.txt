@@ -1,0 +1,30 @@
+MarineEntity ⊑⁻ Organism	invalid inverse
+∃∃hasPart ⊑ MarineEntity	invalid quantifiers
+∃hasPart ⊑ Organism ¬⊓ MarineEntity	invalid negation
+Organism ⊑ ¬MarineEntity¬	invalid negation
+∃isPartOf ⊑ Organism⁻	invalid inverse
+MarineEntity ⊑ ∃∃hasPart	invalid quantifiers
+isPartOf ⊑ ⁻MarineStructure	invalid inverse
+∃isComposedOf ⊑ MarineStructure⁻	invalid inverse
+∃isComposedOf ⊓ ⊑ MarineStructure 	invalid conjunction
+MarineStructure ⊑ ¬MarineEntity¬	invalid negation
+∃∃formsPartOf ⊑ MarineStructure	invalid quantifiers
+MarineEntity ⊑ ∃∃isComposedOf	invalid quantifiers
+formsPartOf ⊑ MarineSystem∃	invalid quantifiers
+∃isPartOf∃ ⊑ MarineSystem	invalid quantifiers
+∃isPartOf ⊑ MarineSystem ⊓	invalid conjunction
+MarineSystem ⊑ ¬MarineStructure¬	invalid negation
+∃⁻consistsOf ⊑ MarineSystem	invalid inverse
+MarineStructure⁻ ⊑ ∃isPartOf	invalid inverse
+consistsOf ⊑⁻ MarineComponent	invalid inverse
+∃comprises⁻ ⊑ ⊓ MarineComponent 	invalid conjunction
+MarineComponent ⊑ ¬MarineSystem¬	invalid negation
+∃∃isComprisedBy ⊑ MarineComponent	invalid quantifiers
+MarineSystem ⊑ ∃∃comprises	invalid quantifiers
+isComprisedBy ⊑ ⁻MarineObject	invalid inverse
+∃isLocatedIn ⊑ MarineObject⁻	invalid inverse
+∃¬isLocatedIn ⊑ MarineObject 	invalid negation
+MarineObject ⊑ ¬MarineComponent¬	invalid negation
+∃contains⁻ ⊑ MarineObject	invalid inverse
+MarineComponent⁻ ⊑ ∃isLocatedIn	invalid inverse
+∃isLocatedIn ⊑ MarineObject ⊓	invalid conjunction

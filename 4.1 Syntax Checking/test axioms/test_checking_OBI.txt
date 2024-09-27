@@ -1,0 +1,60 @@
+DataTransformation⁻ ⊑ ∃isInputTo
+∃isAnalyzedBy ⊑ MaterialEntity
+DataItem ⊑ ¬DataTransformation¬
+∃isUtilizedBy ⊑ MaterialEntity
+∃isPartOf ⊑ AnalysisStep
+Protocol⁻ ⊑ ∃utilizes
+∃transforms ⊑ DataTransformation
+isGeneratedBy ⊑ MaterialEntity
+Design ⊑ ¬Investigation
+DataTransformation¬ ⊑ AnalysisStep
+hasPart ⊑ DataTransformation
+∃isTransformedBy ⊑ DataTransformation ⊓ AnalysisStep
+∃hasPart ⊑ AnalysisStep
+∃analyzes ⊑ MaterialEntity
+DataTransformation ⊑ ¬AnalysisStep
+isInputTo ⊑ ⁻DataTransformation
+∃isPartOf ⊑ AnalysisStep ⊓ MaterialEntity
+Protocol ⊑ ∃analyzes
+∃isInputTo ⊑ DataItem
+MaterialEntity ⊑ Protocol¬
+∃isInputTo ⊑ DataItem ⊓ DataTransformation
+isAnalyzedBy ⊑ AnalysisStep
+∃analyzes⁻ ⊑ MaterialEntity ⊓
+∃isTransformedBy ⊑ DataTransformation
+Protocol⁻ ⊑ ∃analyzes
+∃isGeneratedBy ⊑ Design
+AnalysisStep ⊑ ¬MaterialEntity¬
+∃transforms ⊑ DataTransformation⁻
+Investigation ⊑ ∃generatesDataFor
+Investigation⁻ ⊑ ∃generatesDataFor
+∃isGeneratedBy ⊑ Design⁻
+∃hasPart ⊑ AnalysisStep⁻
+∃isTransformedBy ⊑ DataTransformation ⊓
+isGeneratedBy⁻ ⊑ MaterialEntity
+AnalysisStep⁻ ⊑ ∃isTransformedBy
+Design ⊑ ¬Investigation¬
+AnalysisStep ⊑ ¬MaterialEntity
+∃generatesDataFor ⊑ Design ⊓ Investigation
+∃generatesDataFor⁻ ⊑ Design ⊓
+Protocol ⊑ ∃utilizes
+transforms ⊑ DataItem
+∃⁻isAnalyzedBy ⊑ MaterialEntity
+⁻hasPart ⊑ DataTransformation
+isInputTo⁻⁻ ⊑ DataItem
+∃analyzes ⊑ MaterialEntity ⊓ Protocol
+MaterialEntity⁻ ⊑ ∃isPartOf
+∃isInputTo⁻ ⊓ ⊑ DataItem 
+MaterialEntity ⊑ ¬Protocol
+isUtilizedBy ⊑ Design
+∃isInputTo ⊑ ⊓ DataTransformation 
+DataItem ⊑ ¬DataTransformation
+AnalysisStep ⊑ ∃isTransformedBy
+MaterialEntity ⊑ ∃isPartOf
+∃isPartOf⁻ ⊑ ⊓ AnalysisStep 
+∃⁻isTransformedBy ⊑ DataTransformation
+∃generatesDataFor ⊑ Design
+⁻isUtilizedBy ⊑ Design
+isAnalyzedBy ⊑ ⁻AnalysisStep
+Investigation ⊑ ∃∃analyzes
+transforms ⊑⁻ DataItem

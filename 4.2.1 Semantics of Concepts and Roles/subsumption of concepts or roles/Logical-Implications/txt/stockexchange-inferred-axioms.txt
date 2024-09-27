@@ -1,0 +1,12 @@
+Acquisition ⊑ Transaction
+Company ⊑ LegalPerson
+Dealer ⊑ StockBroker
+Investor ⊑ Person
+LegalPerson ⊑ Person
+Offer ⊑ Transaction
+PhysicalPerson ⊑ Person
+Stock ⊑ FinantialInstrument
+StockBroker ⊑ StockExchangeMember
+StockExchangeMember ⊑ Person
+StockTrader ⊑ StockBroker
+Trader ⊑ StockBroker

@@ -1,0 +1,30 @@
+∃isUtilizedBy ⊑ MaterialEntity
+Protocol ⊑ ∃utilizes
+isUtilizedBy ⊑ Design
+∃generatesDataFor ⊑ Design
+∃generatesDataFor ⊑ Design ⊓ Investigation
+Design ⊑ ¬Investigation
+∃isGeneratedBy ⊑ Design
+Investigation ⊑ ∃generatesDataFor
+isGeneratedBy ⊑ MaterialEntity
+∃analyzes ⊑ MaterialEntity
+∃analyzes ⊑ MaterialEntity ⊓ Protocol
+MaterialEntity ⊑ ¬Protocol
+∃isAnalyzedBy ⊑ MaterialEntity
+Protocol ⊑ ∃analyzes
+isAnalyzedBy ⊑ AnalysisStep
+∃isPartOf ⊑ AnalysisStep
+∃isPartOf ⊑ AnalysisStep ⊓ MaterialEntity
+AnalysisStep ⊑ ¬MaterialEntity
+∃hasPart ⊑ AnalysisStep
+MaterialEntity ⊑ ∃isPartOf
+hasPart ⊑ DataTransformation
+∃isTransformedBy ⊑ DataTransformation
+∃isTransformedBy ⊑ DataTransformation ⊓ AnalysisStep
+DataTransformation ⊑ ¬AnalysisStep
+∃transforms ⊑ DataTransformation
+AnalysisStep ⊑ ∃isTransformedBy
+transforms ⊑ DataItem
+∃isInputTo ⊑ DataItem
+∃isInputTo ⊑ DataItem ⊓ DataTransformation
+DataItem ⊑ ¬DataTransformation

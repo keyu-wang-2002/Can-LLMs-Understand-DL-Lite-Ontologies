@@ -1,0 +1,124 @@
+Classes
+
+Acquisition
+Acquisition ⊑ Transaction
+
+Address
+Address ⊑ Thing
+Address ⊑ ∃inverseofhasAddress
+
+Company
+Company ⊑ LegalPerson
+
+Dealer
+Dealer ≡ Trader
+Dealer ⊑ StockBroker
+
+FinantialInstrument
+
+Investor
+Investor ⊑ Thing
+Investor ⊑ Person
+
+LegalPerson
+LegalPerson ⊑ Person
+
+Offer
+Offer ⊑ Transaction
+
+Person
+Person ⊑ Thing
+Person ⊑ ∃hasAddress
+
+PhysicalPerson
+PhysicalPerson ⊑ Person
+PhysicalPerson ⊑ ¬LegalPerson
+
+Stock
+Stock ⊑ FinantialInstrument
+Stock ⊑ ∃isListedIn.Thing
+Stock ⊑ ∃belongsToCompany
+
+StockBroker
+StockBroker ⊑ ∃tradesOnBehalfOf
+StockBroker ⊑ StockExchangeMember
+
+StockExchangeList
+
+StockExchangeMember
+StockExchangeMember ⊑ Thing
+StockExchangeMember ⊑ Person
+
+StockTrader
+StockTrader ≡ Trader
+StockTrader ⊑ StockBroker
+
+Thing
+
+Trader
+Trader ≡ StockTrader
+Trader ≡ Dealer
+Trader ⊑ StockBroker
+
+Transaction
+Transaction ⊑ ∃involvesInstrument
+Transaction ⊑ Thing
+Transaction ⊑ ∃isExecutedFor
+Transaction ⊑ ∃isExecutedBy
+
+Object properties
+belongsToCompany
+belongsToCompany ≡ hasStock⁻
+∃belongsToCompany ⊑ Stock
+⊤ ⊑ ∀belongsToCompany.Company
+
+hasAddress
+hasAddress ≡ inverseofhasAddress⁻
+∃hasAddress ⊑ Person
+⊤ ⊑ ∀hasAddress.Address
+
+hasStock
+belongsToCompany ≡ hasStock⁻
+∃hasStock Thing ⊑ Company
+⊤ ⊑ ∀hasStock.Stock
+
+inverseofhasAddress
+hasAddress ≡ inverseofhasAddress⁻
+∃inverseofhasAddress Thing ⊑ Address
+⊤ ⊑ ∀inverseofhasAddress.Person
+
+involvesInstrument
+involvesInstrument ≡ isTradedIn⁻
+∃ involvesInstrument Thing ⊑ Transaction
+⊤ ⊑  ∀involvesInstrument.FinantialInstrument
+
+isExecutedBy
+∃isExecutedBy ⊑ Transaction
+⊤ ⊑ ∀isExecutedBy.StockExchangeMember
+
+isExecutedFor
+∃isExecutedFor ⊑ Transaction
+⊤ ⊑ ∀isExecutedFor.Investor
+
+isListedIn
+isListedIn ≡ listsStock⁻
+∃isListedIn ⊑ Stock
+⊤ ⊑ ∀isListedIn.StockExchangeList
+
+isTradedIn
+involvesInstrument ≡ isTradedIn⁻
+⊤ ⊑ ∀isTradedIn.Transaction
+
+listsStock
+isListedIn ≡ listsStock⁻
+⊤ ⊑ ∀listsStock.Stock
+
+tradesOnBehalfOf
+tradesOnBehalfOf ≡ usesBroker⁻
+
+usesBroker
+tradesOnBehalfOf ≡ usesBroker⁻
+
+Data properties
+Individuals
+Datatypes

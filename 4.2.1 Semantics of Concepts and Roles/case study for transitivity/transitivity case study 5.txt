@@ -1,0 +1,42 @@
+Ontology: 
+C1 ⊑ C2
+C1 ⊑ C3
+C2 ⊑ C4
+R1 ⊑ R2
+R3 ⊑ R4
+C5 ⊑ ∃R5
+∃R6 ⊑ C6
+∃R7 ⊑ ∃R8
+C1(a)
+C1(b)
+R1(c, d)
+R3(e, f)
+C5(a)
+R6(a, k)
+R7(g, h)
+
+
+Logical Implications:
+C2(a)
+C3(a)
+C2(b)
+C3(b)
+R2(c, d)
+R4(e, f)
+C4(a)
+C4(b)
+R5(a, _)
+C6(a)
+R8(g, _)
+
+
+
+
+(
+)
+
+
+
+results:
+LLaMA-NI: R5(a, _), R8(h, _)
+

@@ -1,0 +1,424 @@
+Classes
+ Above65
+ Above65 ⊑ AgeValue
+ Account
+ Account ⊑ ¬ Transaction
+ Account ⊑ ¬ Loan
+ Account ⊑ ¬ Client
+ Account ⊑ ¬ LoanStatusValue
+ Account ⊑ ¬ PermanentOrder
+ Account ⊑ ¬ Payment
+ Account ⊑ ¬ Region
+ Account ⊑ ¬ CreditCard
+ Account ⊑ ¬ AgeValue
+ Account ⊑ ¬ SexValue
+ AfterTransaction
+ AfterTransaction ⊑ StatementIssuanceFrequencyValue
+ AfterTransaction ⊑ ¬ Monthly
+ AfterTransaction ⊑ ¬ Weekly
+ AgeValue
+ AgeValue ⊑ ¬ SexValue
+ AgeValue ⊑ ¬ LoanStatusValue
+ AgeValue ⊑ ¬ Region
+ AgeValue ⊑ ¬ CreditCard
+ AgeValue ⊑ ¬ Transaction
+ AgeValue ⊑ ¬ Client
+ AgeValue ⊑ ¬ Account
+ AgeValue ⊑ ¬ Loan
+ AgeValue ⊑ ¬ PermanentOrder
+ AgeValue ⊑ ¬ Payment
+ Below18
+ Below18 ⊑ AgeValue
+ Below18 ⊑ ¬ From25To35
+ Below18 ⊑ ¬ From50To65
+ Below18 ⊑ ¬ From18To25
+ Below18 ⊑ ¬ From35To50
+CashCredit
+ CashCredit ⊑ Credit
+ CashCredit ⊑ ¬ CollectionAnotherBank
+ CashWithdrawal
+ CashWithdrawal ⊑ Withdrawal
+ CashWithdrawal ⊑ ¬ CreditCardWithdrawal
+ CashWithdrawal ⊑ ¬ RemittanceAnotherBank
+ CentralBohemia
+ CentralBohemia ⊑ Region
+ CentralBohemia ⊑ ¬ SouthBohemia
+ CentralBohemia ⊑ ¬ EastBohemia
+ CentralBohemia ⊑ ¬ Prague
+ CentralBohemia ⊑ ¬ NorthMoravia
+ CentralBohemia ⊑ ¬ SouthMoravia
+ CentralBohemia ⊑ ¬ NorthBohemia
+ Classic
+ Classic ⊑ CreditCard
+ Classic ⊑ ¬ Gold
+ Classic ⊑ ¬ Junior
+ Client
+ Client ⊑ ¬ PermanentOrder
+ Client ⊑ ¬ Payment
+ Client ⊑ ¬ Account
+ Client ⊑ ¬ LoanStatusValue
+ Client ⊑ ¬ CreditCard
+ Client ⊑ ¬ AgeValue
+ Client ⊑ ¬ Transaction
+ Client ⊑ ¬ Region
+ Client ⊑ ¬ Loan
+ Client ⊑ ¬ SexValue
+ CollectionAnotherBank
+ CollectionAnotherBank ⊑ Credit
+ CollectionAnotherBank ⊑ ¬ CashCredit
+ Credit
+ Credit ⊑ Transaction
+Credit ⊑ ¬ Withdrawal
+ CreditCard
+ CreditCard ⊑ ¬ Transaction
+ CreditCard ⊑ ¬ AgeValue
+ CreditCard ⊑ ¬ Loan
+ CreditCard ⊑ ¬ Client
+ CreditCard ⊑ ¬ Region
+ CreditCard ⊑ ¬ SexValue
+ CreditCard ⊑ ¬ Account
+ CreditCard ⊑ ¬ Payment
+ CreditCard ⊑ ¬ PermanentOrder
+ CreditCard ⊑ ¬ LoanStatusValue
+ CreditCardWithdrawal
+ CreditCardWithdrawal ⊑ Withdrawal
+ CreditCardWithdrawal ⊑ ¬ CashWithdrawal
+ CreditCardWithdrawal ⊑ ¬ RemittanceAnotherBank
+ DebtRunningLoan
+ DebtRunningLoan ⊑ Running
+ DebtRunningLoan ⊑ ∀ hasLoanStatusValue ProblemStatus
+ DebtRunningLoan ⊑ ¬ OKRunningLoan
+ EastBohemia
+ EastBohemia ⊑ Region
+ EastBohemia ⊑ ¬ CentralBohemia
+ EastBohemia ⊑ ¬ NorthBohemia
+ EastBohemia ⊑ ¬ SouthBohemia
+ EastBohemia ⊑ ¬ Prague
+ EastBohemia ⊑ ¬ NorthMoravia
+ EastBohemia ⊑ ¬ SouthMoravia
+ FemaleSex
+ FemaleSex ⊑ SexValue
+ FemaleSex ⊑ ¬ MaleSex
+ Finished
+ Finished ⊑ Loan
+ Finished ⊑ ¬ Running
+ForStatementPayment
+ ForStatementPayment ⊑ Payment
+ ForStatementPayment ⊑ ¬ HouseholdPayment
+ ForStatementPayment ⊑ ¬ Leasing
+ ForStatementPayment ⊑ ¬ LoanPayment
+ ForStatementPayment ⊑ ¬ InsurrancePayment
+ From18To25
+ From18To25 ⊑ AgeValue
+ From18To25 ⊑ ¬ Below18
+ From18To25 ⊑ ¬ From50To65
+ From18To25 ⊑ ¬ From25To35
+ From18To25 ⊑ ¬ From35To50
+ From25To35
+ From25To35 ⊑ AgeValue
+ From25To35 ⊑ ¬ Below18
+ From25To35 ⊑ ¬ From35To50
+ From25To35 ⊑ ¬ From18To25
+ From25To35 ⊑ ¬ From50To65
+ From35To50
+ From35To50 ⊑ AgeValue
+ From35To50 ⊑ ¬ From25To35
+ From35To50 ⊑ ¬ From18To25
+ From35To50 ⊑ ¬ From50To65
+ From35To50 ⊑ ¬ Below18
+ From50To65
+ From50To65 ⊑ AgeValue
+ From50To65 ⊑ ¬ Below18
+ From50To65 ⊑ ¬ From18To25
+ From50To65 ⊑ ¬ From25To35
+ From50To65 ⊑ ¬ From35To50
+ Gold
+ Gold ⊑ CreditCard
+ Gold ⊑ ¬ Classic
+ Gold ⊑ ¬ Junior
+HouseholdPayment
+ HouseholdPayment ⊑ Payment
+ HouseholdPayment ⊑ ¬ ForStatementPayment
+ HouseholdPayment ⊑ ¬ InsurrancePayment
+ HouseholdPayment ⊑ ¬ LoanPayment
+ HouseholdPayment ⊑ ¬ Leasing
+ InsurrancePayment
+ InsurrancePayment ⊑ Payment
+ InsurrancePayment ⊑ ¬ LoanPayment
+ InsurrancePayment ⊑ ¬ Leasing
+ InsurrancePayment ⊑ ¬ HouseholdPayment
+ InsurrancePayment ⊑ ¬ ForStatementPayment
+ InterestsCredited
+ InterestsCredited ⊑ Credit
+ Junior
+ Junior ⊑ CreditCard
+ Junior ⊑ ¬ Gold
+ Junior ⊑ ¬ Classic
+ Leasing
+ Leasing ⊑ Payment
+ Leasing ⊑ ¬ LoanPayment
+ Leasing ⊑ ¬ InsurrancePayment
+ Leasing ⊑ ¬ ForStatementPayment
+ Leasing ⊑ ¬ HouseholdPayment
+ Loan
+ Loan ⊑ ¬ Account
+ Loan ⊑ ¬ LoanStatusValue
+ Loan ⊑ ¬ Payment
+ Loan ⊑ ¬ Transaction
+ Loan ⊑ ¬ PermanentOrder
+ Loan ⊑ ¬ CreditCard
+ Loan ⊑ ¬ AgeValue
+ Loan ⊑ ¬ Client
+ Loan ⊑ ¬ Region
+ Loan ⊑ ¬ SexValue
+
+LoanPayment
+ LoanPayment ⊑ Payment
+ LoanPayment ⊑ ¬ InsurrancePayment
+ LoanPayment ⊑ ¬ Leasing
+ LoanPayment ⊑ ¬ HouseholdPayment
+ LoanPayment ⊑ ¬ ForStatementPayment
+ LoanStatusValue
+ LoanStatusValue ⊑ ¬ Loan
+ LoanStatusValue ⊑ ¬ AgeValue
+ LoanStatusValue ⊑ ¬ Transaction
+ LoanStatusValue ⊑ ¬ Account
+ LoanStatusValue ⊑ ¬ Payment
+ LoanStatusValue ⊑ ¬ Client
+ LoanStatusValue ⊑ ¬ PermanentOrder
+ LoanStatusValue ⊑ ¬ Region
+ LoanStatusValue ⊑ ¬ SexValue
+ LoanStatusValue ⊑ ¬ CreditCard
+ MaleSex
+ MaleSex ⊑ SexValue
+ MaleSex ⊑ ¬ FemaleSex
+ Man
+ Man ⊑ Client
+ Man ⊑ ∀ hasSexValue MaleSex
+ Man ⊑ ¬ Woman
+ Monthly
+ Monthly ⊑ StatementIssuanceFrequencyValue
+ Monthly ⊑ ¬ Weekly
+ Monthly ⊑ ¬ AfterTransaction
+ NoProblemsFinishedLoan
+ NoProblemsFinishedLoan ⊑ ∀ hasLoanStatusValue OKStatus
+ NoProblemsFinishedLoan ⊑ Finished
+ NoProblemsFinishedLoan ⊑ ¬ NotPaidFinishedLoan
+ NorthBohemia
+ NorthBohemia ⊑ Region
+ NorthBohemia ⊑ ¬ SouthBohemia
+
+NorthBohemia ⊑ ¬ EastBohemia
+ NorthBohemia ⊑ ¬ Prague
+ NorthBohemia ⊑ ¬ NorthMoravia
+ NorthBohemia ⊑ ¬ SouthMoravia
+ NorthBohemia ⊑ ¬ CentralBohemia
+ NorthMoravia
+ NorthMoravia ⊑ Region
+ NorthMoravia ⊑ ¬ SouthMoravia
+ NorthMoravia ⊑ ¬ NorthBohemia
+ NorthMoravia ⊑ ¬ CentralBohemia
+ NorthMoravia ⊑ ¬ EastBohemia
+ NorthMoravia ⊑ ¬ SouthBohemia
+ NorthMoravia ⊑ ¬ Prague
+ NotPaidFinishedLoan
+ NotPaidFinishedLoan ⊑ ∀ hasLoanStatusValue ProblemStatus
+ NotPaidFinishedLoan ⊑ Finished
+ NotPaidFinishedLoan ⊑ ¬ NoProblemsFinishedLoan
+ OKRunningLoan
+ OKRunningLoan ⊑ Running
+ OKRunningLoan ⊑ ∀ hasLoanStatusValue OKStatus
+ OKRunningLoan ⊑ ¬ DebtRunningLoan
+ OKStatus
+ OKStatus ⊑ LoanStatusValue
+ OKStatus ⊑ ¬ ProblemStatus
+ OldAgePension
+ OldAgePension ⊑ CollectionAnotherBank
+ Payment
+ Payment ⊑ ¬ Client
+ Payment ⊑ ¬ Loan
+ Payment ⊑ ¬ LoanStatusValue
+ Payment ⊑ ¬ Region
+ Payment ⊑ ¬ Transaction
+ Payment ⊑ ¬ Account
+ Payment ⊑ ¬ CreditCard
+ Payment ⊑ ¬ SexValue
+
+Payment ⊑ ¬ PermanentOrder
+ Payment ⊑ ¬ AgeValue
+ PermanentOrder
+ PermanentOrder ⊑ Thing
+ PermanentOrder ⊑ ∀ isPermanentOrderFor Payment
+ PermanentOrder ⊑ ¬ Client
+ PermanentOrder ⊑ ¬ SexValue
+ PermanentOrder ⊑ ¬ Region
+ PermanentOrder ⊑ ¬ Loan
+ PermanentOrder ⊑ ¬ Account
+ PermanentOrder ⊑ ¬ LoanStatusValue
+ PermanentOrder ⊑ ¬ Transaction
+ PermanentOrder ⊑ ¬ CreditCard
+ PermanentOrder ⊑ ¬ AgeValue
+ PermanentOrder ⊑ ¬ Payment
+ Prague
+ Prague ⊑ Region
+ Prague ⊑ ¬ NorthBohemia
+ Prague ⊑ ¬ SouthMoravia
+ Prague ⊑ ¬ CentralBohemia
+ Prague ⊑ ¬ SouthBohemia
+ Prague ⊑ ¬ EastBohemia
+ Prague ⊑ ¬ NorthMoravia
+ ProblemStatus
+ ProblemStatus ⊑ LoanStatusValue
+ ProblemStatus ⊑ ¬ OKStatus
+ Region
+ Region ⊑ ¬ Transaction
+ Region ⊑ ¬ AgeValue
+ Region ⊑ ¬ PermanentOrder
+ Region ⊑ ¬ Payment
+ Region ⊑ ¬ CreditCard
+ Region ⊑ ¬ Account
+ Region ⊑ ¬ SexValue
+ Region ⊑ ¬ Client
+ Region ⊑ ¬ LoanStatusValue
+ Region ⊑ ¬ Loan
+
+RemittanceAnotherBank
+ RemittanceAnotherBank ⊑ Withdrawal
+ RemittanceAnotherBank ⊑ ¬ CashWithdrawal
+ RemittanceAnotherBank ⊑ ¬ CreditCardWithdrawal
+ Running
+ Running ⊑ Loan
+ Running ⊑ ¬ Finished
+ SanctionInterestCashWithdrawal
+ SanctionInterestCashWithdrawal ⊑ CashWithdrawal
+ SexValue
+ SexValue ⊑ ¬ AgeValue
+ SexValue ⊑ ¬ PermanentOrder
+ SexValue ⊑ ¬ Transaction
+ SexValue ⊑ ¬ CreditCard
+ SexValue ⊑ ¬ Region
+ SexValue ⊑ ¬ Payment
+ SexValue ⊑ ¬ Account
+ SexValue ⊑ ¬ LoanStatusValue
+ SexValue ⊑ ¬ Client
+ SexValue ⊑ ¬ Loan
+ SouthBohemia
+ SouthBohemia ⊑ Region
+ SouthBohemia ⊑ ¬ CentralBohemia
+ SouthBohemia ⊑ ¬ NorthBohemia
+ SouthBohemia ⊑ ¬ EastBohemia
+ SouthBohemia ⊑ ¬ Prague
+ SouthBohemia ⊑ ¬ SouthMoravia
+ SouthBohemia ⊑ ¬ NorthMoravia
+ SouthMoravia
+ SouthMoravia ⊑ Region
+ SouthMoravia ⊑ ¬ NorthMoravia
+ SouthMoravia ⊑ ¬ Prague
+ SouthMoravia ⊑ ¬ NorthBohemia
+ SouthMoravia ⊑ ¬ SouthBohemia
+ SouthMoravia ⊑ ¬ CentralBohemia
+ SouthMoravia ⊑ ¬ EastBohemia
+
+StatementIssuanceFrequencyValue
+ Thing
+ Transaction
+ Transaction ⊑ ¬ Account
+ Transaction ⊑ ¬ Region
+ Transaction ⊑ ¬ CreditCard
+ Transaction ⊑ ¬ LoanStatusValue
+ Transaction ⊑ ¬ Loan
+ Transaction ⊑ ¬ Payment
+ Transaction ⊑ ¬ AgeValue
+ Transaction ⊑ ¬ SexValue
+ Transaction ⊑ ¬ PermanentOrder
+ Transaction ⊑ ¬ Client
+ Weekly
+ Weekly ⊑ StatementIssuanceFrequencyValue
+ Weekly ⊑ ¬ Monthly
+ Weekly ⊑ ¬ AfterTransaction
+ WestBohemia
+ WestBohemia ⊑ Region
+ Withdrawal
+ Withdrawal ⊑ Transaction
+ Withdrawal ⊑ ¬ Credit
+ Woman
+ Woman ⊑ Client
+ Woman ⊑ ∀ hasSexValue FemaleSex
+ Woman ⊑ ¬ Man
+ Object properties
+ IsLoanOf
+ IsLoanOf ≡ hasLoan−
+ ⊤ ⊑≤1IsLoanOf Thing
+ ⊤ ⊑≤1IsLoanOf− Thing
+ ∃ IsLoanOf Thing ⊑ Loan
+ ⊤ ⊑∀IsLoanOf Account
+
+hasAgeValue
+ ⊤ ⊑≤1hasAgeValue Thing
+ ∃ hasAgeValue Thing ⊑ Client
+ ⊤ ⊑∀hasAgeValue AgeValue
+ hasCreditCard
+ hasCreditCard ≡ isCreditCardOf−
+ ⊤ ⊑≤1hasCreditCard− Thing
+ ∃ hasCreditCard Thing ⊑ Client
+ ⊤ ⊑∀hasCreditCard CreditCard
+ hasLoan
+ IsLoanOf ≡ hasLoan−
+ ⊤ ⊑≤1hasLoan Thing
+ ⊤ ⊑≤1hasLoan− Thing
+ ∃ hasLoan Thing ⊑ Account
+ ⊤ ⊑∀hasLoan Loan
+ hasLoanStatusValue
+ ⊤ ⊑≤1hasLoanStatusValue Thing
+ ∃ hasLoanStatusValue Thing ⊑ Loan
+ ⊤ ⊑∀hasLoanStatusValue LoanStatusValue
+ hasOwner
+ hasOwner ≡ isOwnerOf−
+ ⊤ ⊑≤1hasOwner Thing
+ ∃ hasOwner Thing ⊑ Account
+ ⊤ ⊑∀hasOwner Client
+ hasPermanentOrder
+ ∃ hasPermanentOrder Thing ⊑ Account
+ ⊤ ⊑∀hasPermanentOrder PermanentOrder
+ hasSexValue
+ ⊤ ⊑≤1hasSexValue Thing
+ ∃ hasSexValue Thing ⊑ Client
+ ⊤ ⊑∀hasSexValue SexValue
+ hasStatementIssuanceFrequency
+ ⊤ ⊑≤1hasStatementIssuanceFrequency Thing
+
+∃ hasStatementIssuanceFrequency Thing ⊑ Account
+ ⊤ ⊑∀hasStatementIssuanceFrequency StatementIssuanceFrequencyValue
+ isCreditCardOf
+ hasCreditCard ≡ isCreditCardOf−
+ ⊤ ⊑≤1isCreditCardOf Thing
+ ∃ isCreditCardOf Thing ⊑ CreditCard
+ ⊤ ⊑∀isCreditCardOf Client
+ isOwnerOf
+ hasOwner ≡ isOwnerOf−
+ ⊤ ⊑≤1isOwnerOf− Thing
+ ∃ isOwnerOf Thing ⊑ Client
+ ⊤ ⊑∀isOwnerOf Account
+ isPermanentOrderFor
+ ⊤ ⊑≤1isPermanentOrderFor Thing
+ ∃ isPermanentOrderFor Thing ⊑ PermanentOrder
+ ⊤ ⊑∀isPermanentOrderFor Payment
+ isTransactionFrom
+ ⊤ ⊑≤1isTransactionFrom Thing
+ ∃ isTransactionFrom Thing ⊑ Transaction
+ ⊤ ⊑∀isTransactionFrom Account
+ isUserOf
+ ∃ isUserOf Thing ⊑ Client
+ ⊤ ⊑∀isUserOf Account
+ isWithdrawalFor
+ ⊤ ⊑≤1isWithdrawalFor Thing
+ ∃ isWithdrawalFor Thing ⊑ Withdrawal
+ ⊤ ⊑∀isWithdrawalFor Payment
+ livesIn
+ ⊤ ⊑≤1livesIn Thing
+ ∃ livesIn Thing ⊑ Client
+ ⊤ ⊑∀livesIn Region
+
+Data properties
+ Individuals
+ Datatypes

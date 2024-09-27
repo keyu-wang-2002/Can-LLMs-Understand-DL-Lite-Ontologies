@@ -1,0 +1,132 @@
+########################E-Commerce System (Extracted from the GoodRelations Ontology)####################
+#############  #concept inclusion = 32, #inverse role pairs = 4, functional roles = 2, inverse functional roles = 1, #assertions = 51 ############
+
+Class: Product
+Class: Customer
+Class: Seller
+Class: Order
+Class: Payment
+Class: Shipping
+Class: Review
+Class: Cart
+Class: Category
+Class: Invoice
+Class: Warehouse
+Class: Discount
+
+Product ⊑ ∃BelongsTo.Category
+Product ⊑ ∃StoredIn.Warehouse
+Customer ⊑ ∃Purchases.Product
+Customer ⊑ ∃Leaves.Review
+Customer ⊑ ∃AddsTo.Cart
+Seller ⊑ ∃Offers.Product
+Order ⊑ ∃HasPayment.Payment
+Order ⊑ ∃ShipsWith.Shipping
+Order ⊑ ∃Includes.Product
+Invoice ⊑ ∃AssociatedWith.Order
+Discount ⊑ ∃AppliesTo.Product
+∃BelongsTo⁻ ⊑ Category
+∃StoredIn⁻ ⊑ Warehouse
+∃Purchases⁻ ⊑ Product
+∃Leaves⁻ ⊑ Review
+∃AddsTo⁻ ⊑ Cart
+∃Offers⁻ ⊑ Product
+∃HasPayment⁻ ⊑ Payment
+∃ShipsWith⁻ ⊑ Shipping
+∃Includes⁻ ⊑ Product
+∃AssociatedWith⁻ ⊑ Order
+∃AppliesTo⁻ ⊑ Product
+BelongsTo⁻ ⊑ Owns
+Owns ⊑ BelongsTo⁻
+StoredIn⁻ ⊑ Stores
+Stores ⊑ StoredIn⁻ 
+Purchases⁻ ⊑ IsPurchasedBy
+IsPurchasedBy ⊑ Purchases⁻
+Offers⁻ ⊑ IsOfferedBy
+IsOfferedBy ⊑ Offers⁻
+Customer ⊑ ¬Seller
+Order ⊑ ¬Cart
+(funct BelongsTo)
+(funct StoredIn)
+(funct AppliesTo⁻)
+
+Instance: Product1 Type: Product
+Instance: Customer1 Type: Customer
+Instance: Seller1 Type: Seller
+Instance: Order1 Type: Order
+Instance: Payment1 Type: Payment
+Instance: Shipping1 Type: Shipping
+Instance: Review1 Type: Review
+Instance: Cart1 Type: Cart
+Instance: Category1 Type: Category
+Instance: Invoice1 Type: Invoice
+Instance: Warehouse1 Type: Warehouse
+Instance: Discount1 Type: Discount
+Instance: Product2 Type: Product
+Instance: Customer2 Type: Customer
+Instance: Seller2 Type: Seller
+Instance: Order2 Type: Order
+Instance: Payment2 Type: Payment
+Instance: Shipping2 Type: Shipping
+Instance: Review2 Type: Review
+Instance: Cart2 Type: Cart
+Instance: Category2 Type: Category
+Instance: Invoice2 Type: Invoice
+Instance: Warehouse2 Type: Warehouse
+Instance: Discount2 Type: Discount
+Instance: Product3 Type: Product
+Instance: Customer3 Type: Customer
+Instance: Seller3 Type: Seller
+Instance: Order3 Type: Order
+Instance: Payment3 Type: Payment
+BelongsTo(Product1, Category1)
+StoredIn(Product1, Warehouse1)
+Purchases(Customer1, Product1)
+Leaves(Customer1, Review1)
+AddsTo(Customer1, Cart1)
+Offers(Seller1, Product1)
+HasPayment(Order1, Payment1)
+ShipsWith(Order1, Shipping1)
+Includes(Order1, Product1)
+AssociatedWith(Invoice1, Order1)
+AppliesTo(Discount1, Product1)
+BelongsTo(Product2, Category2)
+StoredIn(Product2, Warehouse2)
+Purchases(Customer2, Product2)
+Leaves(Customer2, Review2)
+AddsTo(Customer2, Cart2)
+Offers(Seller2, Product2)
+HasPayment(Order2, Payment2)
+ShipsWith(Order2, Shipping2)
+Includes(Order2, Product2)
+AssociatedWith(Invoice2, Order2)
+AppliesTo(Discount2, Product2)
+
+
+######################### inverse role probing ##################
+Owns(Category1, Product1)
+Owns(Category2, Product2)
+Stores(Warehouse1, Product1)
+Stores(Warehouse2, Product2)
+IsPurchasedBy(Product2, Customer2)
+IsPurchasedBy(Product1, Customer1)
+IsOfferedBy(Product2, Seller2)
+IsOfferedBy(Product1, Seller1)
+
+######################### functional role probing #################
+BelongsTo(Product1, x1)  
+BelongsTo(Product2, x2)  
+StoredIn(Product1, x3)  
+StoredIn(Product2, x4) 
+
+x1 ≡ Category1
+x2 ≡ Category2
+x3 ≡ Warehouse1
+x4 ≡ Warehouse2
+
+######################### inverse functional role probing ###############
+AppliesTo(y1, Product2)   Discount2
+AppliesTo(y2, Product1)   Discount1
+
+y1 ≡ Discount2
+y2 ≡ Discount1

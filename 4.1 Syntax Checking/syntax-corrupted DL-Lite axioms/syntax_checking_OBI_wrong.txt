@@ -1,0 +1,30 @@
+Protocol⁻ ⊑ ∃utilizes	invalid inverse
+⁻isUtilizedBy ⊑ Design	invalid inverse
+∃generatesDataFor⁻ ⊑ Design ⊓	invalid conjunction
+Design ⊑ ¬Investigation¬	invalid negation
+∃isGeneratedBy ⊑ Design⁻	invalid inverse
+Investigation⁻ ⊑ ∃generatesDataFor	invalid inverse
+isGeneratedBy⁻ ⊑ MaterialEntity	invalid inverse
+∃analyzes⁻ ⊑ MaterialEntity ⊓	invalid conjunction
+MaterialEntity ⊑ Protocol¬	invalid negation
+∃⁻isAnalyzedBy ⊑ MaterialEntity	invalid inverse
+Protocol⁻ ⊑ ∃analyzes	invalid inverse
+isAnalyzedBy ⊑ ⁻AnalysisStep	invalid inverse
+∃isPartOf⁻ ⊑ ⊓ AnalysisStep 	invalid conjunction
+AnalysisStep ⊑ ¬MaterialEntity¬	invalid negation
+∃hasPart ⊑ AnalysisStep⁻	invalid inverse
+MaterialEntity⁻ ⊑ ∃isPartOf	invalid inverse
+⁻hasPart ⊑ DataTransformation	invalid inverse
+∃⁻isTransformedBy ⊑ DataTransformation	invalid inverse
+∃isTransformedBy ⊑ DataTransformation ⊓	invalid conjunction
+DataTransformation¬ ⊑ AnalysisStep	invalid negation
+∃transforms ⊑ DataTransformation⁻	invalid inverse
+AnalysisStep⁻ ⊑ ∃isTransformedBy	invalid inverse
+transforms ⊑⁻ DataItem	invalid inverse
+∃isInputTo⁻ ⊓ ⊑ DataItem 	invalid conjunction
+DataItem ⊑ ¬DataTransformation¬	invalid negation
+Investigation ⊑ ∃∃analyzes	invalid quantifiers
+isInputTo ⊑ ⁻DataTransformation	invalid inverse
+∃isInputTo ⊑ ⊓ DataTransformation 	invalid conjunction
+DataTransformation⁻ ⊑ ∃isInputTo	invalid inverse
+isInputTo⁻⁻ ⊑ DataItem	invalid inverse

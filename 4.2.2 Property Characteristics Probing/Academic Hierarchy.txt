@@ -1,0 +1,223 @@
+############# Academic Hierarchy (Extracted from the University Ontology Benchmark) ################
+#############  #concept inclusion = 36, #inverse role pairs = 6, functional roles = 3, inverse functional roles = 1, #assertions = 120 ############
+
+Class: Professor
+Class: Student
+Class: Course
+Class: Department
+Class: Seminar
+Class: Assistant
+Class: ResearchProject
+Class: AdministrativeStaff
+Class: Laboratory
+Class: Grant
+Class: Publication
+Class: Thesis
+
+Professor ⊑ ∃Teaches.Course
+Professor ⊑ ∃Leads.Department
+Professor ⊑ ∃Supervises.ResearchProject
+Professor ⊑ ∃Publishes.Publication
+Professor ⊑ ∃Guides.Thesis
+Student ⊑ ∃EnrolledIn.Course
+Student ⊑ ∃Attends.Seminar
+Student ⊑ ∃Writes.Thesis
+Assistant ⊑ ∃Assists.Professor
+AdministrativeStaff ⊑ ∃WorksIn.Department
+ResearchProject ⊑ ∃ConductedIn.Laboratory
+Grant ⊑ ∃Funds.ResearchProject
+∃Teaches⁻ ⊑ Course
+∃Leads⁻ ⊑ Department
+∃Supervises⁻ ⊑ ResearchProject
+∃Publishes⁻ ⊑ Publication
+∃Guides⁻ ⊑ Thesis
+∃EnrolledIn⁻ ⊑ Course
+∃Attends⁻ ⊑ Seminar
+∃Writes⁻ ⊑ Thesis
+∃Assists⁻ ⊑ Professor
+∃WorksIn⁻ ⊑ Department
+∃ConductedIn⁻ ⊑ Laboratory
+∃Funds⁻ ⊑ ResearchProject
+Leads⁻ ⊑ IsLedBy
+IsLedBy ⊑ Leads⁻
+Publishes⁻ ⊑ IsPublishedBy
+IsPublishedBy ⊑ Publishes⁻
+WorksIn⁻ ⊑ Employs
+Employs ⊑ WorksIn⁻
+Funds⁻ ⊑ IsFundedBy
+IsFundedBy ⊑ Funds⁻
+Writes⁻ ⊑ IsWrittenBy
+IsWrittenBy ⊑ Writes⁻
+Professor ⊑ ¬Student
+Course ⊑ ¬Seminar
+
+(funct WorksIn)
+(funct ConductedIn)
+(funct Funds)
+(funct Writes⁻)
+
+Instance: John Type: Professor
+Instance: Mary Type: Student
+Instance: CS101 Type: Course
+Instance: MathDept Type: Department
+Instance: AI_Seminar Type: Seminar
+Instance: Research1 Type: ResearchProject
+Instance: Bob Type: Assistant
+Instance: Admin1 Type: AdministrativeStaff
+Instance: Lab1 Type: Laboratory
+Instance: GrantA Type: Grant
+Instance: Paper1 Type: Publication
+Instance: Thesis1 Type: Thesis
+Instance: Sarah Type: Professor
+Instance: Tom Type: Student
+Instance: History101 Type: Course
+Instance: HistoryDept Type: Department
+Instance: Ethics_Seminar Type: Seminar
+Instance: Research2 Type: ResearchProject
+Instance: Alice Type: Assistant
+Instance: Admin2 Type: AdministrativeStaff
+Instance: Lab2 Type: Laboratory
+Instance: GrantB Type: Grant
+Instance: Paper2 Type: Publication
+Instance: Thesis2 Type: Thesis
+Instance: Jane Type: Professor
+Instance: Bob Type: Student
+Instance: Bio101 Type: Course
+Instance: BioDept Type: Department
+Instance: Genetics_Seminar Type: Seminar
+Instance: Research3 Type: ResearchProject
+Instance: Eve Type: Assistant
+Instance: Admin3 Type: AdministrativeStaff
+Instance: Lab3 Type: Laboratory
+Instance: GrantC Type: Grant
+Instance: Paper3 Type: Publication
+Instance: Thesis3 Type: Thesis
+Instance: Mark Type: Professor
+Instance: Tim Type: Student
+Instance: Chem101 Type: Course
+Instance: ChemDept Type: Department
+Instance: Materials_Seminar Type: Seminar
+Instance: Research4 Type: ResearchProject
+Instance: Steve Type: Assistant
+Instance: Admin4 Type: AdministrativeStaff
+Instance: Lab4 Type: Laboratory
+Instance: GrantD Type: Grant
+Instance: Paper4 Type: Publication
+Instance: Thesis4 Type: Thesis
+Instance: Nancy Type: Professor
+Instance: Peter Type: Student
+Instance: Physics101 Type: Course
+Instance: PhysicsDept Type: Department
+Instance: Quantum_Seminar Type: Seminar
+Instance: Research5 Type: ResearchProject
+Instance: Karen Type: Assistant
+Instance: Admin5 Type: AdministrativeStaff
+Instance: Lab5 Type: Laboratory
+Instance: GrantE Type: Grant
+Instance: Paper5 Type: Publication
+Instance: Thesis5 Type: Thesis
+Teaches(John, CS101)
+Leads(John, MathDept)
+Supervises(John, Research1)
+Publishes(John, Paper1)
+Guides(John, Thesis1)
+EnrolledIn(Mary, CS101)
+Attends(Mary, AI_Seminar)
+Writes(Mary, Thesis1)
+Assists(Bob, John)
+WorksIn(Admin1, MathDept)
+ConductedIn(Research1, Lab1)
+Funds(GrantA, Research1)
+Teaches(Sarah, History101)
+Leads(Sarah, HistoryDept)
+Supervises(Sarah, Research2)
+Publishes(Sarah, Paper2)
+Guides(Sarah, Thesis2)
+EnrolledIn(Tom, History101)
+Attends(Tom, Ethics_Seminar)
+Writes(Tom, Thesis2)
+Assists(Alice, Sarah)
+WorksIn(Admin2, HistoryDept)
+ConductedIn(Research2, Lab2)
+Funds(GrantB, Research2)
+Teaches(Jane, Bio101)
+Leads(Jane, BioDept)
+Supervises(Jane, Research3)
+Publishes(Jane, Paper3)
+Guides(Jane, Thesis3)
+EnrolledIn(Bob, Bio101)
+Attends(Bob, Genetics_Seminar)
+Writes(Bob, Thesis3)
+Assists(Eve, Jane)
+WorksIn(Admin3, BioDept)
+ConductedIn(Research3, Lab3)
+Funds(GrantC, Research3)
+Teaches(Mark, Chem101)
+Leads(Mark, ChemDept)
+Supervises(Mark, Research4)
+Publishes(Mark, Paper4)
+Guides(Mark, Thesis4)
+EnrolledIn(Tim, Chem101)
+Attends(Tim, Materials_Seminar)
+Writes(Tim, Thesis4)
+Assists(Steve, Mark)
+WorksIn(Admin4, ChemDept)
+ConductedIn(Research4, Lab4)
+Funds(GrantD, Research4)
+Teaches(Nancy, Physics101)
+Leads(Nancy, PhysicsDept)
+Supervises(Nancy, Research5)
+Publishes(Nancy, Paper5)
+Guides(Nancy, Thesis5)
+EnrolledIn(Peter, Physics101)
+Attends(Peter, Quantum_Seminar)
+Writes(Peter, Thesis5)
+Assists(Karen, Nancy)
+WorksIn(Admin5, PhysicsDept)
+ConductedIn(Research5, Lab5)
+Funds(GrantE, Research5)
+
+
+
+######################## inverse role probing ##################
+IsLedBy(MathDept, John)
+IsLedBy(PhysicsDept, Nancy)
+IsLedBy(HistoryDept, Sarah)
+IsPublishedBy(Paper5, Nancy)
+IsPublishedBy(Paper2, Sarah)
+IsPublishedBy(Paper1, John)
+Employs(HistoryDept, Admin2)
+Employs(ChemDept, Admin4)
+Employs(BioDept, Admin3)
+IsFundedBy(Research5, GrantE)
+IsFundedBy(Research4, GrantD)
+IsFundedBy(Research3, GrantC)
+
+######################## functional role probing ##################
+WorksIn(Admin5, x1)   
+WorksIn(Admin2, x2) 
+WorksIn(Admin4, x3)  
+WorksIn(Admin3, x4) 
+ConductedIn(Research1, x5) 
+ConductedIn(Research2, x6) 
+ConductedIn(Research5,x7 )  
+Funds(GrantA, x8)  
+Funds(GrantD, x9)    
+
+x1 ≡ PhysicsDept
+x2 ≡ HistoryDept
+x3 ≡ ChemDept
+x4 ≡ BioDept
+x5 ≡ Lab1
+x6 ≡ Lab2
+x7 ≡ Lab5
+x8 ≡ Research1
+x9 ≡ Research4
+######################## inverse functional role probing ##################
+Writes(y1, Thesis1)   
+Writes(y2, Thesis5)   
+Writes(y3, Thesis4)   
+
+y1 ≡ Mary
+y2 ≡ Peter
+y3 ≡ Tim

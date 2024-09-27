@@ -1,0 +1,837 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.owl-ontologies.com/unnamed.owl#"
+  xml:base="http://www.owl-ontologies.com/unnamed.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="ForStatementPayment">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Payment"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Leasing"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="InsurrancePayment"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="HouseholdPayment"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="LoanPayment"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="OldAgePension">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="CollectionAnotherBank"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PermanentOrder">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="isPermanentOrderFor"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Payment"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="SexValue"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="CreditCard"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="AgeValue"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Payment"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Region"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Transaction"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Account"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Loan"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Client"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="LoanStatusValue"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="RemittanceAnotherBank">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Withdrawal"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="CreditCardWithdrawal"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="CashWithdrawal"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Running">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Finished"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Loan"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Account">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SexValue"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Client"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Loan"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Region"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AgeValue"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#PermanentOrder"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Transaction"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CreditCard"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Payment"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#LoanStatusValue"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Woman">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="FemaleSex"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="hasSexValue"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Client"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Man"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="WestBohemia">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Region"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#AgeValue">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Loan"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#LoanStatusValue"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Client"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Account"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CreditCard"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Transaction"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SexValue"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Region"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Payment"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#PermanentOrder"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ProblemStatus">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LoanStatusValue"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="OKStatus"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="NotPaidFinishedLoan">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#ProblemStatus"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasLoanStatusValue"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Finished"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="NoProblemsFinishedLoan"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Prague">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="SouthBohemia"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="EastBohemia"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Region"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="SouthMoravia"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="NorthBohemia"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="CentralBohemia"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="NorthMoravia"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="From18To25">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="From50To65"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#AgeValue"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="From25To35"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Below18"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="From35To50"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Below18">
+    <rdfs:subClassOf rdf:resource="#AgeValue"/>
+    <owl:disjointWith rdf:resource="#From18To25"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#From25To35"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#From50To65"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#From35To50"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="SanctionInterestCashWithdrawal">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CashWithdrawal"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Gold">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Junior"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Classic"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CreditCard"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Above65">
+    <rdfs:subClassOf rdf:resource="#AgeValue"/>
+  </owl:Class>
+  <owl:Class rdf:about="#LoanStatusValue">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Transaction"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Region"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#AgeValue"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SexValue"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Payment"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Loan"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Client"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#PermanentOrder"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CreditCard"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Account"/>
+  </owl:Class>
+  <owl:Class rdf:about="#NorthBohemia">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NorthMoravia"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Region"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#EastBohemia"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CentralBohemia"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Prague"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SouthMoravia"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SouthBohemia"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#CentralBohemia">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SouthBohemia"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SouthMoravia"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#NorthBohemia"/>
+    <owl:disjointWith rdf:resource="#Prague"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Region"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NorthMoravia"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#EastBohemia"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="OKRunningLoan">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="DebtRunningLoan"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#Running"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasLoanStatusValue"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#OKStatus"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#From35To50">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#From25To35"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#AgeValue"/>
+    <owl:disjointWith rdf:resource="#Below18"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#From50To65"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#From18To25"/>
+  </owl:Class>
+  <owl:Class rdf:about="#EastBohemia">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SouthBohemia"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NorthMoravia"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#CentralBohemia"/>
+    <owl:disjointWith rdf:resource="#NorthBohemia"/>
+    <owl:disjointWith rdf:resource="#Prague"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SouthMoravia"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Region"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Loan">
+    <owl:disjointWith rdf:resource="#PermanentOrder"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SexValue"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Transaction"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#AgeValue"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CreditCard"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Account"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Client"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Payment"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#LoanStatusValue"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Region"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="InterestsCredited">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Credit"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Withdrawal">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Transaction"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Credit"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#SouthMoravia">
+    <owl:disjointWith rdf:resource="#NorthBohemia"/>
+    <owl:disjointWith rdf:resource="#CentralBohemia"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Region"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#EastBohemia"/>
+    <owl:disjointWith rdf:resource="#Prague"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NorthMoravia"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SouthBohemia"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Finished">
+    <rdfs:subClassOf rdf:resource="#Loan"/>
+    <owl:disjointWith rdf:resource="#Running"/>
+  </owl:Class>
+  <owl:Class rdf:about="#InsurrancePayment">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#LoanPayment"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Leasing"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#HouseholdPayment"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#ForStatementPayment"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Payment"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Junior">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CreditCard"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Gold"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Classic"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Credit">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Transaction"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Withdrawal"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Classic">
+    <owl:disjointWith rdf:resource="#Junior"/>
+    <owl:disjointWith rdf:resource="#Gold"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CreditCard"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#From50To65">
+    <owl:disjointWith rdf:resource="#From18To25"/>
+    <rdfs:subClassOf rdf:resource="#AgeValue"/>
+    <owl:disjointWith rdf:resource="#From35To50"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#From25To35"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Below18"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MaleSex">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FemaleSex"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SexValue"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#CreditCardWithdrawal">
+    <owl:disjointWith rdf:resource="#RemittanceAnotherBank"/>
+    <rdfs:subClassOf rdf:resource="#Withdrawal"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CashWithdrawal"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Transaction">
+    <owl:disjointWith rdf:resource="#AgeValue"/>
+    <owl:disjointWith rdf:resource="#LoanStatusValue"/>
+    <owl:disjointWith rdf:resource="#Account"/>
+    <owl:disjointWith rdf:resource="#PermanentOrder"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Payment"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CreditCard"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Loan"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SexValue"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Region"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Client"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Leasing">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Payment"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#LoanPayment"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#ForStatementPayment"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#HouseholdPayment"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#InsurrancePayment"/>
+  </owl:Class>
+  <owl:Class rdf:ID="StatementIssuanceFrequencyValue"/>
+  <owl:Class rdf:about="#SexValue">
+    <owl:disjointWith rdf:resource="#Transaction"/>
+    <owl:disjointWith rdf:resource="#PermanentOrder"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Client"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CreditCard"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Region"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Account"/>
+    <owl:disjointWith rdf:resource="#Loan"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Payment"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#LoanStatusValue"/>
+    <owl:disjointWith rdf:resource="#AgeValue"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CashCredit">
+    <rdfs:subClassOf rdf:resource="#Credit"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CollectionAnotherBank"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="AfterTransaction">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Weekly"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#StatementIssuanceFrequencyValue"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Monthly"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#SouthBohemia">
+    <owl:disjointWith rdf:resource="#EastBohemia"/>
+    <owl:disjointWith rdf:resource="#NorthBohemia"/>
+    <owl:disjointWith rdf:resource="#CentralBohemia"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NorthMoravia"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SouthMoravia"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Region"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Prague"/>
+  </owl:Class>
+  <owl:Class rdf:about="#NoProblemsFinishedLoan">
+    <owl:disjointWith rdf:resource="#NotPaidFinishedLoan"/>
+    <rdfs:subClassOf rdf:resource="#Finished"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#OKStatus"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasLoanStatusValue"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Weekly">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Monthly"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#AfterTransaction"/>
+    <rdfs:subClassOf rdf:resource="#StatementIssuanceFrequencyValue"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Payment">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Client"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#AgeValue"/>
+    <owl:disjointWith rdf:resource="#PermanentOrder"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CreditCard"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Account"/>
+    <owl:disjointWith rdf:resource="#Transaction"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Region"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Loan"/>
+    <owl:disjointWith rdf:resource="#SexValue"/>
+    <owl:disjointWith rdf:resource="#LoanStatusValue"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CreditCard">
+    <owl:disjointWith rdf:resource="#Transaction"/>
+    <owl:disjointWith rdf:resource="#LoanStatusValue"/>
+    <owl:disjointWith rdf:resource="#PermanentOrder"/>
+    <owl:disjointWith rdf:resource="#Loan"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Region"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Client"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SexValue"/>
+    <owl:disjointWith rdf:resource="#Payment"/>
+    <owl:disjointWith rdf:resource="#AgeValue"/>
+    <owl:disjointWith rdf:resource="#Account"/>
+  </owl:Class>
+  <owl:Class rdf:about="#FemaleSex">
+    <rdfs:subClassOf rdf:resource="#SexValue"/>
+    <owl:disjointWith rdf:resource="#MaleSex"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Man">
+    <owl:disjointWith rdf:resource="#Woman"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasSexValue"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#MaleSex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Client"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#CollectionAnotherBank">
+    <owl:disjointWith rdf:resource="#CashCredit"/>
+    <rdfs:subClassOf rdf:resource="#Credit"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CashWithdrawal">
+    <owl:disjointWith rdf:resource="#CreditCardWithdrawal"/>
+    <rdfs:subClassOf rdf:resource="#Withdrawal"/>
+    <owl:disjointWith rdf:resource="#RemittanceAnotherBank"/>
+  </owl:Class>
+  <owl:Class rdf:about="#NorthMoravia">
+    <owl:disjointWith rdf:resource="#SouthBohemia"/>
+    <owl:disjointWith rdf:resource="#Prague"/>
+    <owl:disjointWith rdf:resource="#SouthMoravia"/>
+    <owl:disjointWith rdf:resource="#NorthBohemia"/>
+    <owl:disjointWith rdf:resource="#EastBohemia"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Region"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#CentralBohemia"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Monthly">
+    <owl:disjointWith rdf:resource="#Weekly"/>
+    <rdfs:subClassOf rdf:resource="#StatementIssuanceFrequencyValue"/>
+    <owl:disjointWith rdf:resource="#AfterTransaction"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Region">
+    <owl:disjointWith rdf:resource="#LoanStatusValue"/>
+    <owl:disjointWith rdf:resource="#Account"/>
+    <owl:disjointWith rdf:resource="#CreditCard"/>
+    <owl:disjointWith rdf:resource="#Transaction"/>
+    <owl:disjointWith rdf:resource="#Payment"/>
+    <owl:disjointWith rdf:resource="#Loan"/>
+    <owl:disjointWith rdf:resource="#AgeValue"/>
+    <owl:disjointWith rdf:resource="#SexValue"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Client"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#PermanentOrder"/>
+  </owl:Class>
+  <owl:Class rdf:about="#HouseholdPayment">
+    <owl:disjointWith rdf:resource="#Leasing"/>
+    <owl:disjointWith rdf:resource="#InsurrancePayment"/>
+    <owl:disjointWith rdf:resource="#ForStatementPayment"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#LoanPayment"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#Payment"/>
+  </owl:Class>
+  <owl:Class rdf:about="#OKStatus">
+    <rdfs:subClassOf rdf:resource="#LoanStatusValue"/>
+    <owl:disjointWith rdf:resource="#ProblemStatus"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Client">
+    <owl:disjointWith rdf:resource="#Region"/>
+    <owl:disjointWith rdf:resource="#LoanStatusValue"/>
+    <owl:disjointWith rdf:resource="#CreditCard"/>
+    <owl:disjointWith rdf:resource="#Payment"/>
+    <owl:disjointWith rdf:resource="#AgeValue"/>
+    <owl:disjointWith rdf:resource="#PermanentOrder"/>
+    <owl:disjointWith rdf:resource="#Account"/>
+    <owl:disjointWith rdf:resource="#Loan"/>
+    <owl:disjointWith rdf:resource="#Transaction"/>
+    <owl:disjointWith rdf:resource="#SexValue"/>
+  </owl:Class>
+  <owl:Class rdf:about="#From25To35">
+    <owl:disjointWith rdf:resource="#From18To25"/>
+    <owl:disjointWith rdf:resource="#Below18"/>
+    <owl:disjointWith rdf:resource="#From35To50"/>
+    <owl:disjointWith rdf:resource="#From50To65"/>
+    <rdfs:subClassOf rdf:resource="#AgeValue"/>
+  </owl:Class>
+  <owl:Class rdf:about="#LoanPayment">
+    <rdfs:subClassOf rdf:resource="#Payment"/>
+    <owl:disjointWith rdf:resource="#Leasing"/>
+    <owl:disjointWith rdf:resource="#HouseholdPayment"/>
+    <owl:disjointWith rdf:resource="#InsurrancePayment"/>
+    <owl:disjointWith rdf:resource="#ForStatementPayment"/>
+  </owl:Class>
+  <owl:Class rdf:about="#DebtRunningLoan">
+    <rdfs:subClassOf rdf:resource="#Running"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasLoanStatusValue"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#ProblemStatus"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#OKRunningLoan"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#isPermanentOrderFor">
+    <rdfs:domain rdf:resource="#PermanentOrder"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#Payment"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPermanentOrder">
+    <rdfs:range rdf:resource="#PermanentOrder"/>
+    <rdfs:domain rdf:resource="#Account"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="IsLoanOf">
+    <rdfs:range rdf:resource="#Account"/>
+    <rdfs:domain rdf:resource="#Loan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:inverseOf>
+      <owl:FunctionalProperty rdf:ID="hasLoan"/>
+    </owl:inverseOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasLoanStatusValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Loan"/>
+    <rdfs:range rdf:resource="#LoanStatusValue"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isUserOf">
+    <rdfs:domain rdf:resource="#Client"/>
+    <rdfs:range rdf:resource="#Account"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasAgeValue">
+    <rdfs:range rdf:resource="#AgeValue"/>
+    <rdfs:domain rdf:resource="#Client"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:FunctionalProperty rdf:ID="hasStatementIssuanceFrequency">
+    <rdfs:domain rdf:resource="#Account"/>
+    <rdfs:range rdf:resource="#StatementIssuanceFrequencyValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasSexValue">
+    <rdfs:domain rdf:resource="#Client"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#SexValue"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="isWithdrawalFor">
+    <rdfs:range rdf:resource="#Payment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Withdrawal"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="isTransactionFrom">
+    <rdfs:range rdf:resource="#Account"/>
+    <rdfs:domain rdf:resource="#Transaction"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="livesIn">
+    <rdfs:range rdf:resource="#Region"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Client"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasOwner">
+    <rdfs:domain rdf:resource="#Account"/>
+    <rdfs:range rdf:resource="#Client"/>
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:ID="isOwnerOf"/>
+    </owl:inverseOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasLoan">
+    <rdfs:range rdf:resource="#Loan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Account"/>
+    <owl:inverseOf rdf:resource="#IsLoanOf"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="isCreditCardOf">
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:ID="hasCreditCard"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Client"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#CreditCard"/>
+  </owl:FunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="#isOwnerOf">
+    <rdfs:range rdf:resource="#Account"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="#hasOwner"/>
+    <rdfs:domain rdf:resource="#Client"/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="#hasCreditCard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Client"/>
+    <rdfs:range rdf:resource="#CreditCard"/>
+    <owl:inverseOf rdf:resource="#isCreditCardOf"/>
+  </owl:InverseFunctionalProperty>
+
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 1.3, Build 225.4)  http://protege.stanford.edu -->

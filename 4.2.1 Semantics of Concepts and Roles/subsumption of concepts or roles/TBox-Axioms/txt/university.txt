@@ -1,0 +1,207 @@
+Classes
+
+AdministrativeStaff
+AdministrativeStaff ⊑ Employee
+
+AssistantProfessor
+AssistantProfessor ⊑ Professor
+
+AssociateProfessor
+AssociateProfessor ⊑ Professor
+
+BachelorExam
+BachelorExam ⊑ Exam
+
+Career
+Career ⊑ Work
+
+Chair
+Chair ⊑ Professor
+
+ClericalStaff
+ClericalStaff ⊑ AdministrativeStaff
+
+College
+College ⊑ Organization
+
+Course
+Course ⊑ Work
+
+Dean
+Dean ⊑ Professor
+Dean ⊑ ∃headOf.College
+
+Degree
+Degree ⊑ Work
+
+Director
+Director ⊑ Person
+Director ⊑ ∃headOf.Program
+
+Employee
+Employee ⊑ Person
+Employee ⊑ ∃worksFor.Organization
+
+ExDean
+ExDean ⊑ Professor
+
+Exam
+Exam ⊑ Work
+
+ExamRecord
+ExamRecord ⊑ Work
+
+Faculty
+Faculty ⊑ Organization
+
+FacultyStaff
+FacultyStaff ⊑ Employee
+
+FullProfessor
+FullProfessor ⊑ Professor
+
+GraduateCourse
+GraduateCourse ⊑ Course
+
+GraduateStudent
+GraduateStudent ⊑ ∃takesCourse.GraduateCourse
+GraduateStudent ⊑ Person
+
+Lecturer
+Lecturer ⊑ FacultyStaff
+
+Organization
+
+Person
+
+PostDoc
+PostDoc ⊑ FacultyStaff
+
+Professor
+Professor ⊑ FacultyStaff
+
+Program
+Program ⊑ Organization
+
+ResearchAssistant
+ResearchAssistant ⊑ Student
+
+Student
+Student ⊑ ∃takesCourse.Course
+Student ⊑ Person
+
+SystemsStaff
+SystemsStaff ⊑ AdministrativeStaff
+
+UndergraduateStudent
+UndergraduateStudent ⊑ Student
+
+University
+University ⊑ Organization
+
+VisitingProfessor
+VisitingProfessor ⊑ Professor
+
+Work
+
+Object properties
+
+advisor
+∃advisor.Thing ⊑ Person
+⊤ ⊑ ∀advisor.Professor
+
+affiliateOf
+∃affiliateOf ⊑ Organization
+⊤ ⊑ ∀affiliateOf.Person
+
+affiliatedOrganizationOf
+∃affiliatedOrganizationOf ⊑ Organization
+⊤ ⊑ ∀affiliatedOrganizationOf.Organization
+
+degreeFrom
+degreeFrom ≡ hasAlumnus⁻
+∃degreeFrom ⊑ Person
+⊤ ⊑ ∀degreeFrom.University
+
+doctoralDegreeFrom
+⊑ degreeFrom
+∃doctoralDegreeFrom Thing ⊑ Person
+⊤ ⊑ ∀doctoralDegreeFrom.University
+
+hasAlumnus
+degreeFrom ≡ hasAlumnus⁻
+∃hasAlumnus Thing ⊑ University
+⊤ ⊑ ∀hasAlumnus.Person
+
+hasExamRecord
+∃hasExamRecord Thing ⊑ Student
+⊤ ⊑ ∀hasExamRecord.ExamRecord
+
+hasFaculty
+hasFaculty ≡ isPartOfUniversity⁻
+∃hasFaculty ⊑ University
+⊤ ⊑ ∀hasFaculty.Faculty
+
+headOf
+⊑ worksFor
+
+isPartOfUniversity
+hasFaculty ≡ isPartOfUniversity⁻
+∃isPartOfUniversity Thing ⊑ Faculty
+⊤ ⊑ ∀isPartOfUniversity.University
+
+mastersDegreeFrom
+⊑ degreeFrom
+∃mastersDegreeFrom Thing ⊑ Person
+⊤ ⊑ ∀mastersDegreeFrom.University
+
+member
+member ≡ memberOf⁻
+∃member ⊑ Organization
+⊤ ⊑ ∀member.Person
+
+memberOf
+member ≡ memberOf⁻
+
+orgPublication
+∃orgPublication ⊑ Organization
+
+publicationAuthor
+⊤ ⊑ ∀publicationAuthor.Person
+
+publicationDate
+
+publicationResearch
+
+researchProject
+
+softwareDocumentation
+
+softwareVersion
+
+takesCourse
+
+teacherOf
+∃teacherOf ⊑ FacultyStaff
+⊤ ⊑ ∀teacherOf.Course
+
+teachingAssistantOf
+⊤ ⊑ ∀teachingAssistantOf.Course
+
+tenured
+∃tenured ⊑ Professor
+
+undergraduateDegreeFrom
+⊑ degreeFrom
+∃undergraduateDegreeFrom ⊑ Person
+⊤ ⊑ ∀undergraduateDegreeFrom.University
+
+worksFor
+⊑ memberOf
+
+Data properties
+
+Individuals
+
+Datatypes
+string

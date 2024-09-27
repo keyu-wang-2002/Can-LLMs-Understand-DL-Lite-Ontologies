@@ -1,0 +1,190 @@
+MIS <0> : 
+  [0] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Groundnut> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Groundnut> <http://reliant.teknowledge.com/DAML/Economy.owl#EdibleTuber>)
+  [2] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Groundnut> <http://reliant.teknowledge.com/DAML/Economy.owl#Groundnut_node>)
+  [3] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+  [4] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#EdibleTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+
+MIS <1> : 
+  [0] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Turnip> <http://reliant.teknowledge.com/DAML/Economy.owl#Turnip_node>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Turnip> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Turnip> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+  [3] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+
+MIS <2> : 
+  [0] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Ginger> <http://reliant.teknowledge.com/DAML/Economy.owl#Ginger_node>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Ginger> <http://reliant.teknowledge.com/DAML/Economy.owl#Spice>)
+  [2] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#Spice> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Ginger> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+
+MIS <3> : 
+  [0] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Olive> <http://reliant.teknowledge.com/DAML/Economy.owl#Fruit>)
+  [1] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#Fruit> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [2] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Olive> <http://reliant.teknowledge.com/DAML/Economy.owl#Olive_node>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Olive> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+
+MIS <4> : 
+  [0] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Carrot> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Carrot> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+  [2] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Carrot> <http://reliant.teknowledge.com/DAML/Economy.owl#Carrot_node>)
+  [3] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+
+MIS <5> : 
+  [0] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#CitrusFruit> <http://reliant.teknowledge.com/DAML/Economy.owl#Fruit>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#CitrusFruit> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [2] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#Fruit> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Lime> <http://reliant.teknowledge.com/DAML/Economy.owl#CitrusFruit>)
+  [4] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Lime> <http://reliant.teknowledge.com/DAML/Economy.owl#Lime_node>)
+
+MIS <6> : 
+  [0] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Lumber> <http://reliant.teknowledge.com/DAML/Economy.owl#Lumber_node>)
+  [1] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#ForestProduct> <http://reliant.teknowledge.com/DAML/Economy.owl#ManufacturedProduct>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Lumber> <http://reliant.teknowledge.com/DAML/Economy.owl#ManufacturedProduct>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Lumber> <http://reliant.teknowledge.com/DAML/Economy.owl#ForestProduct>)
+
+MIS <7> : 
+  [0] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#Fruit> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [1] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Tomato> <http://reliant.teknowledge.com/DAML/Economy.owl#Tomato_node>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Tomato> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Tomato> <http://reliant.teknowledge.com/DAML/Economy.owl#Fruit>)
+
+MIS <8> : 
+  [0] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Cassava> <http://reliant.teknowledge.com/DAML/Economy.owl#Cassava_node>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Cassava> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Cassava> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+  [3] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+
+MIS <9> : 
+  [0] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#MulberryLeaf> <http://reliant.teknowledge.com/DAML/Mid-level-ontology.owl#Fodder>)
+  [1] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#MulberryLeaf> <http://reliant.teknowledge.com/DAML/Economy.owl#MulberryLeaf_node>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#PlantAgriculturalProduct> <http://reliant.teknowledge.com/DAML/Economy.owl#AgriculturalProduct>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#MulberryLeaf> <http://reliant.teknowledge.com/DAML/Economy.owl#PlantAgriculturalProduct>)
+  [4] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#AgriculturalProduct> <http://reliant.teknowledge.com/DAML/Mid-level-ontology.owl#Fodder>)
+
+MIS <10> : 
+  [0] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Alfalfa> <http://reliant.teknowledge.com/DAML/Economy.owl#Alfalfa_node>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Alfalfa> <http://reliant.teknowledge.com/DAML/Mid-level-ontology.owl#Fodder>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Alfalfa> <http://reliant.teknowledge.com/DAML/Economy.owl#PlantAgriculturalProduct>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#PlantAgriculturalProduct> <http://reliant.teknowledge.com/DAML/Economy.owl#AgriculturalProduct>)
+  [4] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#AgriculturalProduct> <http://reliant.teknowledge.com/DAML/Mid-level-ontology.owl#Fodder>)
+
+MIS <11> : 
+  [0] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#PotatoTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#EdibleTuber>)
+  [1] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#PotatoTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#PotatoTuber_node>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#PotatoTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [3] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+  [4] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#EdibleTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+
+MIS <12> : 
+  [0] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#ForageCrop> <http://reliant.teknowledge.com/DAML/Economy.owl#PlantAgriculturalProduct>)
+  [1] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#ForageCrop> <http://reliant.teknowledge.com/DAML/Economy.owl#ForageCrop_node>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#PlantAgriculturalProduct> <http://reliant.teknowledge.com/DAML/Economy.owl#AgriculturalProduct>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#ForageCrop> <http://reliant.teknowledge.com/DAML/Mid-level-ontology.owl#Fodder>)
+  [4] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#AgriculturalProduct> <http://reliant.teknowledge.com/DAML/Mid-level-ontology.owl#Fodder>)
+
+MIS <13> : 
+  [0] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#IndustrialSupply> <http://reliant.teknowledge.com/DAML/Economy.owl#CapitalGood>)
+  [1] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#CapitalGood> <http://reliant.teknowledge.com/DAML/Economy.owl#ManufacturedProduct>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#IndustrialSupply> <http://reliant.teknowledge.com/DAML/Economy.owl#ManufacturedProduct>)
+  [3] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#IndustrialSupply> <http://reliant.teknowledge.com/DAML/Economy.owl#IndustrialSupply_node>)
+
+MIS <14> : 
+  [0] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Squash> <http://reliant.teknowledge.com/DAML/Economy.owl#Squash_node>)
+  [1] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Squash> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Squash> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+
+MIS <15> : 
+  [0] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Cucumber> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Cucumber> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [3] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Cucumber> <http://reliant.teknowledge.com/DAML/Economy.owl#Cucumber_node>)
+
+MIS <16> : 
+  [0] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#SweetPotatoTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#EdibleTuber>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#SweetPotatoTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [2] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#SweetPotatoTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#SweetPotatoTuber_node>)
+  [3] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+  [4] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#EdibleTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+
+MIS <17> : 
+  [0] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#YamTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#EdibleTuber>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#YamTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [2] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#EdibleTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+  [4] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#YamTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#YamTuber_node>)
+
+MIS <18> : 
+  [0] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Clover> <http://reliant.teknowledge.com/DAML/Economy.owl#PlantAgriculturalProduct>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Clover> <http://reliant.teknowledge.com/DAML/Mid-level-ontology.owl#Fodder>)
+  [2] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Clover> <http://reliant.teknowledge.com/DAML/Economy.owl#Clover_node>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#PlantAgriculturalProduct> <http://reliant.teknowledge.com/DAML/Economy.owl#AgriculturalProduct>)
+  [4] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#AgriculturalProduct> <http://reliant.teknowledge.com/DAML/Mid-level-ontology.owl#Fodder>)
+
+MIS <19> : 
+  [0] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#TaroTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#EdibleTuber>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#TaroTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [2] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#TaroTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#TaroTuber_node>)
+  [3] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+  [4] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#EdibleTuber> <http://reliant.teknowledge.com/DAML/Economy.owl#RootVegetable>)
+
+MIS <20> : 
+  [0] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#HandwovenCarpet> <http://reliant.teknowledge.com/DAML/Economy.owl#HandwovenCarpet_node>)
+  [1] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#HandicraftProduct> <http://reliant.teknowledge.com/DAML/Economy.owl#ManufacturedProduct>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#HandwovenCarpet> <http://reliant.teknowledge.com/DAML/Economy.owl#HandicraftProduct>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#HandwovenCarpet> <http://reliant.teknowledge.com/DAML/Economy.owl#TextileProduct>)
+  [4] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#TextileProduct> <http://reliant.teknowledge.com/DAML/Economy.owl#ManufacturedProduct>)
+
+MIS <21> : 
+  [0] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Cabbage> <http://reliant.teknowledge.com/DAML/Economy.owl#Cabbage_node>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Cabbage> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Cabbage> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [3] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+
+MIS <22> : 
+  [0] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Corn> <http://reliant.teknowledge.com/DAML/Economy.owl#Corn_node>)
+  [1] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Corn> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Corn> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+
+MIS <23> : 
+  [0] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [1] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Eggplant> <http://reliant.teknowledge.com/DAML/Economy.owl#Eggplant_node>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Eggplant> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Eggplant> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+
+MIS <24> : 
+  [0] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [1] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#SugarCane> <http://reliant.teknowledge.com/DAML/Economy.owl#SugarCane_node>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#SugarCane> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#SugarCane> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+
+MIS <25> : 
+  [0] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#SweetPepper> <http://reliant.teknowledge.com/DAML/Economy.owl#SweetPepper_node>)
+  [1] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#SweetPepper> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#SweetPepper> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+
+MIS <26> : 
+  [0] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#GreenPepper> <http://reliant.teknowledge.com/DAML/Economy.owl#GreenPepper_node>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#GreenPepper> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [2] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#GreenPepper> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+
+MIS <27> : 
+  [0] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#LeafyGreenVegetable> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [2] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#LeafyGreenVegetable> <http://reliant.teknowledge.com/DAML/Economy.owl#LeafyGreenVegetable_node>)
+  [3] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#LeafyGreenVegetable> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+
+MIS <28> : 
+  [0] DisjointClasses(<http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [1] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Cauliflower> <http://reliant.teknowledge.com/DAML/Economy.owl#GroceryProduce>)
+  [2] SubClassOf(<http://reliant.teknowledge.com/DAML/Economy.owl#Cauliflower> <http://reliant.teknowledge.com/DAML/Economy.owl#Vegetable>)
+  [3] ClassAssertion(<http://reliant.teknowledge.com/DAML/Economy.owl#Cauliflower> <http://reliant.teknowledge.com/DAML/Economy.owl#Cauliflower_node>)
+
+****************************************
+ Time (ms) to compute MIS is : 1000044
+
+ The number of found MIS is : 0
+****************************************

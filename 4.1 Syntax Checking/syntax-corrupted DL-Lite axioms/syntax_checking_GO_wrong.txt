@@ -1,0 +1,30 @@
+MolecularFunction⁻ ⊑ ∃hasPart	invalid inverse
+hasPart ⊑ ⁻GeneProduct	invalid inverse
+∃⁻isInvolvedIn ⊑ Protein	invalid inverse
+∃isInvolvedIn ⊑ MacromolecularComplex ⊓	invalid conjunction
+MacromolecularComplex ⊑ ¬Protein¬	invalid negation
+∃∃hasComponent ⊑ MacromolecularComplex	invalid quantifiers
+Protein⁻ ⊑ ∃isInvolvedIn	invalid inverse
+⁻hasComponent ⊑ GeneProduct	invalid inverse
+∃occursIn∃ ⊑ BiologicalProcess	invalid quantifiers
+∃occursIn ⊑ MolecularFunction BiologicalProcess ⊓	invalid conjunction
+MolecularFunction ⊑ ¬BiologicalProcess¬	invalid negation
+∃∃participatesIn ⊑ MolecularFunction	invalid quantifiers
+BiologicalProcess ⊑ ∃∃occursIn	invalid quantifiers
+participatesIn ⊑ ∃GeneProduct∃	invalid quantifiers
+∃expresses ⊑ GeneProduct∃	invalid quantifiers
+∃expresses ⊑ Protein ∃ GeneProduct	invalid conjunction
+Protein ⊑ ¬GeneProduct¬	invalid negation
+∃isExpressedIn ⊑ ∃	invalid quantifiers
+GeneProduct ⊑ ∃∃expresses	invalid quantifiers
+isExpressedIn ⊑ MacromolecularComplex∃	invalid quantifiers
+bindsTo∃ ⊑ Protein	invalid quantifiers
+∃bindsTo ⊑ GeneProduct Protein ⊓	invalid conjunction
+GeneProduct ⊑ ¬Protein¬	invalid negation
+∃∃isBoundBy ⊑ GeneProduct	invalid quantifiers
+Protein ⊑ ∃∃bindsTo	invalid quantifiers
+∃regulates⁻ ⊑ MolecularFunction ⊓ BiologicalProcess ⊓	invalid conjunction
+MolecularFunction ⊑ ¬BiologicalEntity¬	invalid negation
+∃has_part ⊑ CellularComponent⁻ ⊓ CellularComponent	invalid inverse
+∃interacts_with ⊑ MolecularFunction ⊓ BiologicalEntity⁻	invalid inverse
+∃has_synthesized_entity ⊑ BiologicalProcess ⊓ BiologicalEntity ⊓	invalid conjunction

@@ -1,0 +1,638 @@
+Classes
+
+Abbey
+Abbey ⊑ Building
+
+Abstract-Notion
+Abstract-Notion ⊑ Flavour
+
+Actor
+Actor ⊑ Entertainer
+
+Animal
+Animal ⊑ Natural-Object
+
+Architect
+Architect ⊑ Creator
+
+Armament
+Armament ⊑ Artefact
+
+Art-Form
+Art-Form ⊑ Abstract-Notion
+
+Artefact
+Artefact ⊑ Object
+
+Artist
+Artist ⊑ Creator
+
+Artistic-Movement
+Artistic-Movement ⊑ Movement
+
+Artistic-Style
+Artistic-Style ⊑ Abstract-Notion
+
+Astronaut
+Astronaut ⊑ Discoverer
+
+Author
+Author ⊑ Creator
+
+Badge
+Badge ⊑ Conceptual-Object
+
+Battle
+Battle ⊑ Event
+
+Board
+Board ⊑ Management-Organisation
+
+Book
+Book ⊑ Writing
+
+Building
+Building ⊑ Artefact
+
+Business-Leader
+Business-Leader ⊑ Magnate
+
+Category
+Category ⊑ VicodiOI
+
+Cathedral
+Cathedral ⊑ Building
+
+Church
+Church ⊑ Building
+
+Church-Reformer
+Church-Reformer ⊑ Religious-Leader
+
+City
+City ⊑ Settlement
+
+Cleric
+Cleric ⊑ Person-Role
+
+Clerical-Leader
+Clerical-Leader ⊑ Leader
+
+Clothing
+Clothing ⊑ Artefact
+
+Commodity
+Commodity ⊑ Natural-Object
+
+Composer
+Composer ⊑ Artist
+
+Conceptual-Object
+Conceptual-Object ⊑ Object
+
+Conductor
+Conductor ⊑ Entertainer
+
+Country
+Country ⊑ Location
+
+Creator
+Creator ⊑ Person-Role
+
+Crime
+Crime ⊑ Event
+
+Criminal
+Criminal ⊑ Person-Role
+
+Cultural-Agreement
+Cultural-Agreement ⊑ Event
+
+Cultural-Organisation
+Cultural-Organisation ⊑ Organisation
+
+Dancer
+Dancer ⊑ Entertainer
+
+Diplomat
+Diplomat ⊑ Functionary
+
+Disaster
+Disaster ⊑ Event
+
+Discoverer
+Discoverer ⊑ Person-Role
+
+Disease
+Disease ⊑ Natural-Object
+
+Dramaturge
+Dramaturge ⊑ Creator
+
+Dynasty
+Dynasty ⊑ Social-Group
+
+Ecclesiarch
+Ecclesiarch ⊑ Religious-Leader
+
+Economic-Enterprise
+Economic-Enterprise ⊑ Economic-Organisation
+
+Economic-Organisation
+Economic-Organisation ⊑ Organisation
+
+Economic-Process
+Economic-Process ⊑ Event
+
+Economic-Symbol
+Economic-Symbol ⊑ Symbol
+
+Economist
+Economist ⊑ Scientist
+
+Educational-Organisation
+Educational-Organisation ⊑ Organisation
+
+Election
+Election ⊑ Event
+
+Emperor
+Emperor ⊑ Head-of-State
+
+Engineer
+Engineer ⊑ Creator
+
+Entertainer
+Entertainer ⊑ Person-Role
+
+Environment
+Environment ⊑ Natural-Object
+
+Ethnic-Group
+Ethnic-Group ⊑ Social-Group
+
+Event
+Event ⊑ Flavour
+
+Fictional-Event
+Fictional-Event ⊑ Event
+
+Fictional-Person
+Fictional-Person ⊑ Individual
+
+Field-of-Knowledge
+Field-of-Knowledge ⊑ Intellectual-Construct
+
+Film-Maker
+Film-Maker ⊑ Creator
+
+Flavour
+Flavour ⊑ Time-Dependent
+
+Food
+Food ⊑ Natural-Object
+
+Foreign-Minister
+Foreign-Minister ⊑ Minister
+
+Functionary
+Functionary ⊑ Person-Role
+
+FuzzyTemporalInterval
+FuzzyTemporalInterval ⊑ Time
+
+Geographer
+Geographer ⊑ Scientist
+
+Geographical-Discovery
+Geographical-Discovery ⊑ Event
+
+Geographical-Feature
+Geographical-Feature ⊑ Location
+
+Geographical-Region
+Geographical-Region ⊑ Geographical-Feature
+
+Governmental-Organisation
+Governmental-Organisation ⊑ Political-Organisation
+
+Head-of-Government
+Head-of-Government ⊑ Secular-Leader
+
+Head-of-State
+Head-of-State ⊑ Secular-Leader
+
+Idea
+Idea ⊑ Abstract-Notion
+
+Ideology
+Ideology ⊑ Abstract-Notion
+
+Illness
+Illness ⊑ Life-Event
+
+Individual
+Individual ⊑ Flavour
+
+Intellectual-Construct
+Intellectual-Construct ⊑ Abstract-Notion
+
+Intellectual-Movement
+Intellectual-Movement ⊑ Movement
+
+International-Alliance
+International-Alliance ⊑ Political-Organisation
+
+International-Organisation
+International-Organisation ⊑ Organisation
+
+Intra-State-Group
+Intra-State-Group ⊑ Location
+
+Inventor
+Inventor ⊑ Person-Role
+
+Journal
+Journal ⊑ Writing
+
+Journalist
+Journalist ⊑ Creator
+
+Jurist
+Jurist ⊑ Functionary
+
+King
+King ⊑ Head-of-State
+
+Landmark
+Landmark ⊑ Geographical-Feature
+
+Language
+Language ⊑ Abstract-Notion
+
+Leader
+Leader ⊑ Person-Role
+
+League
+League ⊑ Political-Organisation
+
+Legislation
+Legislation ⊑ Event
+
+Life-Event
+Life-Event ⊑ Event
+
+Liturgical-Object
+Liturgical-Object ⊑ Artefact
+
+Location
+Location ⊑ Flavour
+
+Location-Part-Relation
+Location-Part-Relation ⊑ Time-Dependent-Relation
+
+Magnate
+Magnate ⊑ Secular-Leader
+
+Management-Organisation
+Management-Organisation ⊑ Organisation
+
+Masonic-Lodge
+Masonic-Lodge ⊑ Cultural-Organisation
+
+Measurable-Trend
+Measurable-Trend ⊑ Abstract-Notion
+
+Meeting
+Meeting ⊑ Event
+
+Military-Organisation
+Military-Organisation ⊑ Organisation
+
+Military-Person
+Military-Person ⊑ Person-Role
+
+Military-Unit
+Military-Unit ⊑ Military-Organisation
+
+Minister
+Minister ⊑ Functionary
+
+Monastery
+Monastery ⊑ Building
+
+Movement
+Movement ⊑ Social-Group
+
+Musician
+Musician ⊑ Entertainer
+
+National-Symbol
+National-Symbol ⊑ Symbol
+
+Natural-Object
+Natural-Object ⊑ Object
+
+Newspaper
+Newspaper ⊑ Writing
+
+Non-Military-Conflict
+Non-Military-Conflict ⊑ Event
+
+Object
+Object ⊑ Flavour
+
+Organisation
+Organisation ⊑ Flavour
+
+Other-Religious-Leader
+Other-Religious-Leader ⊑ Religious-Leader
+
+Other-Religious-Person
+Other-Religious-Person ⊑ Person-Role
+
+Painter
+Painter ⊑ Artist
+
+Painting
+Painting ⊑ Work-of-Art
+
+Pamphlet
+Pamphlet ⊑ Writing
+
+Party
+Party ⊑ Political-Organisation
+
+Pastime
+Pastime ⊑ Conceptual-Object
+
+Period
+Period ⊑ Event
+
+Period-in-Office
+Period-in-Office ⊑ Event
+
+Person
+Person ⊑ Individual
+
+Person-Role
+Person-Role ⊑ Role
+
+Philanthropist
+Philanthropist ⊑ Person-Role
+
+Philosopher
+Philosopher ⊑ Scientist
+
+Physician
+Physician ⊑ Person-Role
+
+Piece-of-Music
+Piece-of-Music ⊑ Work-of-Art
+
+Political-Organisation
+Political-Organisation ⊑ Organisation
+
+Political-Region
+Political-Region ⊑ Location
+
+Political-Symbol
+Political-Symbol ⊑ Symbol
+
+Politician
+Politician ⊑ Functionary
+
+Pollution
+Pollution ⊑ Artefact
+
+Pope
+Pope ⊑ Religious-Leader
+
+Population-Movement
+Population-Movement ⊑ Event
+
+Prince
+Prince ⊑ Head-of-State
+
+Professor
+Professor ⊑ Person-Role
+
+Psychologist
+Psychologist ⊑ Scientist
+
+Public-Oration
+Public-Oration ⊑ Event
+
+Publisher
+Publisher ⊑ Creator
+
+Queen
+Queen ⊑ Head-of-State
+
+Relic
+Relic ⊑ Artefact
+
+Religious-Community
+Religious-Community ⊑ Religious-Organisation
+
+Religious-Ideology
+Religious-Ideology ⊑ Ideology
+
+Religious-Leader
+Religious-Leader ⊑ Leader
+
+Religious-Movement
+Religious-Movement ⊑ Movement
+
+Religious-Order
+Religious-Order ⊑ Religious-Organisation
+
+Religious-Organisation
+Religious-Organisation ⊑ Cultural-Organisation
+
+Religious-Practice
+Religious-Practice ⊑ Conceptual-Object
+
+Religious-Symbol
+Religious-Symbol ⊑ Symbol
+
+Representative-Institution
+Representative-Institution ⊑ Political-Organisation
+
+Ritual
+Ritual ⊑ Conceptual-Object
+
+Role
+Role ⊑ Time-Dependent
+
+Saint
+Saint ⊑ Person-Role
+
+Scandal
+Scandal ⊑ Event
+
+Scientific-Instrument
+Scientific-Instrument ⊑ Artefact
+
+Scientist
+Scientist ⊑ Person-Role
+
+Sculptor
+Sculptor ⊑ Artist
+
+Sculpture
+Sculpture ⊑ Work-of-Art
+
+Secular-Ideology
+Secular-Ideology ⊑ Ideology
+
+Secular-Leader
+Secular-Leader ⊑ Leader
+
+Secular-Movement
+Secular-Movement ⊑ Movement
+
+Settlement
+Settlement ⊑ Location
+
+Ship
+Ship ⊑ Vehicle
+
+Social-Group
+Social-Group ⊑ Flavour
+
+Social-Stratum
+Social-Stratum ⊑ Social-Group
+
+Sportsman
+Sportsman ⊑ Person-Role
+
+Stereotype-Group
+Stereotype-Group ⊑ Social-Group
+
+Structure
+Structure ⊑ Artefact
+
+Sultan
+Sultan ⊑ Head-of-State
+
+Symbol
+Symbol ⊑ Role
+
+Technical-Scientific-Advance
+Technical-Scientific-Advance ⊑ Event
+
+TemporalInterval
+TemporalInterval ⊑ Time
+
+Theologian
+Theologian ⊑ Person-Role
+
+Time
+Time ⊑ VicodiOI
+
+Time-Dependent
+Time-Dependent ⊑ VicodiOI
+
+Time-Dependent-Relation
+Time-Dependent-Relation ⊑ Time-Dependent
+
+Trade-Association
+Trade-Association ⊑ Economic-Organisation
+
+Trades-Union
+Trades-Union ⊑ Economic-Organisation
+
+Trades-Unionist
+Trades-Unionist ⊑ Secular-Leader
+
+Train
+Train ⊑ Vehicle
+
+Treaty
+Treaty ⊑ Event
+
+Trial
+Trial ⊑ Event
+
+University
+University ⊑ Educational-Organisation
+
+Uprising
+Uprising ⊑ Event
+
+Vehicle
+Vehicle ⊑ Artefact
+
+VicodiOI
+
+Village
+Village ⊑ Settlement
+
+War
+War ⊑ Event
+
+Water
+Water ⊑ Geographical-Feature
+
+Work-of-Art
+Work-of-Art ⊑ Artefact
+
+Writing
+Writing ⊑ Artefact
+
+Object properties
+
+exists
+⊑ related
+∃exists ⊑ Time-Dependent
+⊤ ⊑ ∀exists.Time
+
+hasCategory
+⊑ related
+∃hasCategory ⊑ Time-Dependent
+⊤ ⊑ ∀hasCategory.Category
+
+hasLocationContainerMember
+⊑ hasRelationMember
+∃hasLocationContainerMember ⊑ Location-Part-Relation
+⊤ ⊑ ∀hasLocationContainerMember.Location
+
+hasLocationPartMember
+⊑ hasRelationMember
+∃hasLocationPartMember ⊑ Location-Part-Relation
+⊤ ⊑ ∀hasLocationPartMember.Location
+
+hasRelationMember
+⊑ related
+∃hasRelationMember ⊑ Time-Dependent-Relation
+⊤ ⊑ ∀hasRelationMember.Time-Dependent
+
+hasRole
+⊑ related
+∃hasRole ⊑ Flavour
+⊤ ⊑ ∀hasRole.Role
+
+isLocationContainerMemberOf
+⊑ isRelationMemberOf
+∃isLocationContainerMemberOf ⊑ Location
+⊤ ⊑ ∀isLocationContainerMemberOf.Location-Part-Relation
+
+isLocationPartMemberOf
+⊑ isRelationMemberOf
+∃isLocationPartMemberOf ⊑ Location
+⊤ ⊑ ∀isLocationPartMemberOf.Location-Part-Relation
+
+isRelationMemberOf
+⊑ related
+∃isRelationMemberOf ⊑ Time-Dependent
+⊤ ⊑ ∀isRelationMemberOf.Time-Dependent-Relation
+
+related
+∃related ⊑ VicodiOI
+
+⊤ ⊑ ∀related.VicodiOI
+
+Data properties
+Individuals
+Datatypes

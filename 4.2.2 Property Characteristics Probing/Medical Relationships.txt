@@ -1,0 +1,71 @@
+#################  Medical Relationships (Extracted from SNOMED CT)  ###################
+#############  #concept inclusion = 16, #inverse role pairs = 3, functional roles = 1, inverse functional roles = 0, #assertions = 27 ############
+
+Class: Doctor
+Class: Patient
+Class: Hospital
+Class: Treatment
+Class: Diagnosis
+
+Doctor ⊑ ∃Treats.Patient
+Doctor ⊑ ∃WorksAt.Hospital
+Patient ⊑ ∃Receives.Treatment
+Patient ⊑ ∃DiagnosedWith.Diagnosis
+∃Treats⁻ ⊑ Patient
+∃WorksAt⁻ ⊑ Hospital
+∃Receives⁻ ⊑ Treatment
+∃DiagnosedWith⁻ ⊑ Diagnosis
+Treats⁻ ⊑ IsTreatedBy
+IsTreatedBy ⊑ Treats⁻
+WorksAt⁻ ⊑ Employs
+Employs ⊑ WorksAt⁻
+Receives⁻ ⊑ GivenTo
+GiveTo ⊑ Receives⁻
+Doctor ⊑ ¬Patient
+Hospital ⊑ ¬Diagnosis
+(funct WorksAt)
+
+Instance: DrSmith Type: Doctor
+Instance: Jane Type: Patient
+Instance: CityHospital Type: Hospital
+Instance: TreatmentA Type: Treatment
+Instance: DiagnosisX Type: Diagnosis
+Instance: DrLee Type: Doctor
+Instance: John Type: Patient
+Instance: GeneralHospital Type: Hospital
+Instance: TreatmentB Type: Treatment
+Instance: DiagnosisY Type: Diagnosis
+Instance: DrBrown Type: Doctor
+Instance: Mary Type: Patient
+Instance: RegionalHospital Type: Hospital
+Instance: TreatmentC Type: Treatment
+Instance: DiagnosisZ Type: Diagnosis
+Treats(DrSmith, Jane)
+WorksAt(DrSmith, CityHospital)
+Receives(Jane, TreatmentA)
+DiagnosedWith(Jane, DiagnosisX)
+Treats(DrLee, John)
+WorksAt(DrLee, GeneralHospital)
+Receives(John, TreatmentB)
+DiagnosedWith(John, DiagnosisY)
+Treats(DrBrown, Mary)
+WorksAt(DrBrown, RegionalHospital)
+Receives(Mary, TreatmentC)
+DiagnosedWith(Mary, DiagnosisZ)
+
+
+############################### inverse roles probing ################################
+IsTreatedBy(Mary, DrBrown)
+Employs(CityHospital, DrSmith)
+Employs(GeneralHospital, DrLee)
+GivenTo(TreatmentA, Jane)
+GivenTo(TreatmentB, John)
+
+############################### functional roles probing ################################
+WorksAt(DrSmith, x1)   
+WorksAt(DrLee, x2)      
+WorksAt(DrBrown, x3) 
+
+x1 ≡ CityHospital
+x2 ≡ GeneralHospital
+x3 ≡ RegionalHospital

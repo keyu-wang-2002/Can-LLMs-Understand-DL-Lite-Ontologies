@@ -1,0 +1,17 @@
+∃Advise ⊑ Professor
+Professor ⊑ Employee
+Postdoc ⊑ Employee
+Professor ⊑ ¬Postdoc
+∃WorkFor ⊑ Employee
+∃WorkFor⁻ ⊑ Department
+Employee ⊑ ¬Department
+∃TakeCourse⁻ ⊑ Course
+∃Advise⁻ ⊑ Person
+Course ⊑ ¬Person
+Postdoc(ann)
+Advise(ann, bob)
+Advise(ann, carl)
+Teach(ann, c_1)
+TakeCourse(c_2, carl)
+WorkFor(ann, dpt)
+WorkFor(dpt, dan)

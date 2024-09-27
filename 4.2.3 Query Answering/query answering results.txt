@@ -1,0 +1,41 @@
+Q1(x) = GraduateStudent(x), takesCourse(x, GraduateCourse0)
+GPT4o results: GraduateStudent2,  GraduateStudent42
+
+Q2(x, y, z) = GraduateStudent(x), University(y), Department(z), memberOf(x, z), subOrganizationOf(z, y), undergraduateDegreeFrom(x, y)
+GPT4o results: (GraduateStudent21, University0, Department0)
+
+Q3(x) = Publication(x), publicationAuthor(x, AssistantProfessor0)
+GPT4o results: Publication0, Publication1, Publication2
+
+Q4(x, y1, y2, y3) = Professor(x), worksFor(x, University0), name(x, y1), emailAddress(x, y2), telephone(x, y3)
+GPT4o results: (Professor0, "John Doe", "johndoe@university0.edu", "123-456-7890")
+
+Q5(x) = Person(x), memberOf(x, University0)
+GPT4o results: Professor0,  AssistantProfessor0, GraduateStudent21
+
+Q6(x) = Student(x)
+GPT4o results: GraduateStudent21
+
+Q7(x, y) = Student(x), Course(y), takesCourse(x, y), teacherOf(AssociateProfessor0, y)
+GPT4o results:  (GraduateStudent21, Course0)
+
+Q8(x, y, z) = Student(x), Department(y), memberOf(x, y), subOrganizationOf(y, University0), emailAddress(x, z)
+GPT4o results: (GraduateStudent21, Department0, GraduateStudent21@Department0.University0.edu)
+
+Q9(x, y, z) = Student(x), Faculty(y), Course(z), advisor(x, y), teacherOf(y, z), takesCourse(x, z)
+GPT4o results: (GraduateStudent21, AssociateProfessor0, Course0)
+
+Q10(x) = Student(x), takesCourse(x, GraduateCourse0)
+GPT4o results: No
+
+Q11(x) = ResearchGroup(x), subOrganizationOf(x, University0.edu)
+GPT4o results: ResearchGroup0
+
+Q12(x, y) = Chair(x), Department(y), worksFor(x, y), subOrganizationOf(y, University0)
+GPT4o results: (AssociateProfessor0, Department0)
+
+Q13(x) = Person(x), hasAlumnus(University0, x)
+GPT4o results: Person0
+
+Q14(x) = UndergraduateStudent(x)
+GPT4o results: UndergraduateStudent0

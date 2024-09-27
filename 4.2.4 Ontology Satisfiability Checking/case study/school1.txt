@@ -1,0 +1,8 @@
+PhDStudent ⊑ Student
+PhDStudent ⊑ Employee
+Student ⊑ ¬Employee
+Student ⊑ ∃hasTutor
+(funct hasTutor)
+PhDStudent(a)
+hasTutor(a, b)
+hasTutor(a, c)

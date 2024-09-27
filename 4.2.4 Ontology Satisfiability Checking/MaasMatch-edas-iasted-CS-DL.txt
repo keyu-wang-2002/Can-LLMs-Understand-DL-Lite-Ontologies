@@ -1,0 +1,563 @@
+CS <1>
+ConferenceEvent ⊑ ¬Country
+Country ≡ City
+ConferenceDinner ≡ Conference_city
+Conference_city : Cancun
+Conference_city ⊑ City
+ConferenceDinner ⊑ MealEvent
+NonAcademicEvent ⊑ ConferenceEvent
+
+CS <2>
+SecurityTopic ⊑ Topic
+ConferenceEvent ⊑ ¬Topic
+Conference_activity ⊑ Activity
+Conference_city : Cancun
+MealEvent ≡ Conference_activity
+ConferenceDinner ⊑ MealEvent
+MealEvent ⊑ NonAcademicEvent
+NonAcademicEvent ⊑ ConferenceEvent
+
+CS <3>
+∃isProviderOf ⊑ Sponsorship
+AccommodationPlace ≡ Delegate
+AccommodationPlace ⊑ Place
+Conference_state ⊑ ∃is_visited_by.Delegate
+Place ⊑ ¬Sponsorship
+isProviderOf ≡ is_paid_by
+Conference_state : Mexico
+Registration_fee ⊑ ∃is_paid_by.Delegate
+
+CS <4>
+Person ≡ Person
+AccommodationPlace ≡ Delegate
+AccommodationPlace ⊑ Place
+Conference_state ⊑ ∃is_visited_by.Delegate
+∃is_visited_by ⊑ Person
+Conference_state : Mexico
+
+CS <5>
+Paper ⊑ Document
+Conference_state ⊑ ∃is_visited_by.Delegate
+is_paid_by ≡ pay⁻
+isProviderOf ≡ is_paid_by
+providedBy ≡ is_paid_with
+∃providedBy ⊑ Organization
+isProviderOf ≡ providedBy⁻
+RatedPapers ⊑ ActivePaper
+∃is_paid_with ⊑ Item
+Document ⊑ ¬Organization
+Delegate ⊑ ∃pay.Registration_fee
+
+CS <6>
+AccommodationPlace ≡ Delegate
+AccommodationPlace ⊑ Place
+isProviderOf ≡ providedBy⁻
+∃providedBy ⊑ Sponsorship
+Place ⊑ ¬Sponsorship
+isProviderOf ≡ is_paid_by
+Conference_state : Mexico
+Registration_fee ⊑ ∃is_paid_by.Delegate
+
+CS <7>
+Delegate ⊑ ∃need.Viza
+AcademicEvent ⊑ ConferenceEvent
+Conference_state ⊑ ∃is_visited_by.Delegate
+∃providedBy ⊑ Sponsorship
+isProviderOf ≡ is_paid_by
+is_needed_for ≡ need⁻
+isProviderOf ≡ providedBy⁻
+∃forEvent ⊑ AcademicEvent
+forEvent ≡ is_needed_for
+Delegate ⊑ ∃pay.Registration_fee
+Conference_state : Mexico
+Registration_fee ⊑ ∃is_paid_by.Delegate
+
+CS <8>
+ReviewRating ≡ Hotel_registration_form
+Organization ⊑ ¬ReviewForm
+∃isProviderOf ⊑ Organization
+Conference_state ⊑ ∃is_visited_by.Delegate
+AcceptRating ≡ Registration_fee
+isProviderOf ≡ is_paid_by
+ReviewForm ≡ Form
+Hotel_registration_form ⊑ Form
+Delegate ⊑ ∃pay.Registration_fee
+Conference_state : Mexico
+Registration_fee ⊑ ∃is_paid_by.Delegate
+
+CS <9>
+GovernmentOrganization ≡ Registation_deadline
+∃isProviderOf ⊑ Organization
+Conference_state ⊑ ∃is_visited_by.Delegate
+Registration_form ⊑ ∃is_sent_before.Registation_deadline
+isProviderOf ≡ is_paid_by
+Registation_deadline ⊑ Deadline
+MedicineTopic ⊑ Topic
+Organization ≡ Registration_form
+Organization ⊑ ¬Topic
+MedicineTopic ≡ Deadline
+Delegate ⊑ ∃pay.Registration_fee
+Conference_state : Mexico
+Registration_fee ⊑ ∃is_paid_by.Delegate
+
+CS <10>
+ReviewForm ≡ Form
+Organization ≡ Registration_form
+Organization ⊑ ¬ReviewForm
+∃isProviderOf ⊑ Organization
+Conference_state ⊑ ∃is_visited_by.Delegate
+Delegate ⊑ ∃pay.Registration_fee
+isProviderOf ≡ is_paid_by
+Conference_state : Mexico
+Registration_fee ⊑ ∃is_paid_by.Delegate
+
+CS <11>
+Registration ⊑ Conference_activity
+ReviewQuestion ≡ Registration
+Conference_state ⊑ ∃is_visited_by.Delegate
+MealEvent ⊑ NonAcademicEvent
+MealEvent ≡ Conference_activity
+NonAcademicEvent ⊑ ConferenceEvent
+Conference_state : Mexico
+Delegate ≡ ∃go_through.Registration ⊓ ∃is_present_in.Conference_building ⊓ ∃is_present_in.Conference_days
+
+CS <12>
+PublishedPaper ⊑ Paper
+Delegate ⊑ ∃occupy.Presenter_house
+PendingPaper ≡ Audiovisual_equipment
+Conference_state ⊑ ∃is_visited_by.Delegate
+PublishedPaper ≡ Presenter_house
+PendingPaper ⊑ ¬PublishedPaper
+Conference_state : Mexico
+
+CS <13>
+Memeber_registration_fee ⊑ Registration_fee
+Trip_city : Chichen_Itza
+AcceptRating ⊑ ¬WeekRejectRating
+WeekRejectRating ≡ Memeber_registration_fee
+TPCMember ≡ IASTED_member
+TwoLevelConference ≡ Conference ⊓ ∃hasMember.TPCMember ⊓ ∀hasMember.Person
+AcceptRating ≡ Registration_fee
+Trip_city ⊑ ∃is_visited_by.Conference_Hiker
+
+CS <14>
+DiningPlace ⊑ Place
+Conference ≡ Conference_building
+Conference_state ⊑ ∃is_visited_by.Delegate
+DiningPlace ≡ Building
+Conference_state : Mexico
+Conference_building ⊑ Building
+Delegate ≡ ∃go_through.Registration ⊓ ∃is_present_in.Conference_building ⊓ ∃is_present_in.Conference_days
+
+CS <15>
+IASTED_member ⊑ Delegate
+Conference ⊑ ¬Place
+Conference ≡ Conference_building
+SingleLevelConference ≡ Conference_hall
+is_paid_by ≡ pay⁻
+∃providedBy ⊑ Sponsorship
+isProviderOf ≡ is_paid_by
+Person ⊑ ¬Sponsorship
+Conference_hall ⊑ Place
+isProviderOf ≡ providedBy⁻
+SingleLevelConference ≡ Conference ⊓ ¬TwoLevelConference ⊓ ∀hasMember.Person
+TPCMember ≡ IASTED_member
+Place ≡ Place
+TwoLevelConference ≡ Conference ⊓ ∃hasMember.TPCMember ⊓ ∀hasMember.Person
+∃hasMember ⊑ Person
+Delegate ⊑ ∃pay.Registration_fee
+Conference_state : Mexico
+Delegate ≡ ∃go_through.Registration ⊓ ∃is_present_in.Conference_building ⊓ ∃is_present_in.Conference_days
+
+CS <16>
+Activity_before_conference ⊑ ∃is_held_before.Conference_days
+Place ⊑ ¬Topic
+AntennasTopic ≡ Record_of_attendance
+NonAcademicEvent ≡ Activity_before_conference
+MealEvent ≡ Conference_activity
+Conference_city ⊑ ∃is_visited_by.Delegate
+Record_of_attendance ⊑ ∃is_situated_in.Session_room
+∃is_situated_in ⊑ Building ⊔ City ⊔ Place
+Country ≡ City
+Audiovisual_equipment ⊑ ∃is_designed_for.Listener
+Registration_fee ⊑ ∃is_paid_for.Conference_activity
+AntennasTopic ⊑ Topic
+Country ⊑ ¬Topic
+Place ≡ Place
+Listener ⊑ ∃sign.Record_of_attendance
+Conference_city : Cancun
+Video_cassette_player ⊑ Audiovisual_equipment
+MealEvent ⊑ NonAcademicEvent
+Paper ≡ Video_cassette_player
+Delegate ⊑ ∃pay.Registration_fee
+hasRelatedPaper ≡ is_held_before
+
+
+CS <17>
+hasProgramme ≡ prepare
+ConferenceEvent ⊑ ¬Person
+Conference_state ⊑ ∃is_visited_by.Delegate
+Author ≡ Person ⊓ ∃hasRelatedDocument.Paper
+Presenter ⊑ Author
+Presenter ≡ Presenter_state
+Author ≡ Author
+Author ⊑ ∃prepare.Transparency
+Delegate ⊑ ∃occupy.Presenter_house
+∃hasProgramme ⊑ ConferenceEvent
+Conference_state : Mexico
+
+CS <18>
+Presenter ⊑ Author
+ConferenceEvent ⊑ ¬Person
+Author ≡ Author
+Author ⊑ ∃prepare.Transparency
+Delegate ⊑ ∃occupy.Presenter_state
+∃hasProgramme ⊑ ConferenceEvent
+Conference_state ⊑ ∃is_visited_by.Delegate
+Author ≡ Person ⊓ ∃hasRelatedDocument.Paper
+Conference_state : Mexico
+
+CS <18>
+Presenter ⊑ Author
+hasProgramme ≡ prepare
+Presenter ≡ Presenter_state
+ConferenceEvent ⊑ ¬Person
+Author ≡ Author
+Delegate ⊑ ∃occupy.Presenter_state
+∃hasProgramme ⊑ ConferenceEvent
+Conference_state ⊑ ∃is_visited_by.Delegate
+Author ≡ Person ⊓ ∃hasRelatedDocument.Paper
+Conference_state : Mexico
+
+CS <19>
+∃hasRelatedPaper ⊑ Author
+ConferenceDinner ≡ Conference_city
+ConferenceEvent ⊑ ¬Person
+NonAcademicEvent ≡ Activity_before_conference
+Conference_city : Cancun
+ConferenceDinner ⊑ MealEvent
+MealEvent ⊑ NonAcademicEvent
+NonAcademicEvent ⊑ ConferenceEvent
+Author ≡ Person ⊓ ∃hasRelatedDocument.Paper
+hasRelatedPaper ≡ is_held_before
+
+CS <20>
+Activity_before_conference ⊑ ∃is_held_before.Conference_days
+ConferenceSession ≡ Conference_days
+ConferenceDinner ≡ Conference_city
+∃hasRelatedPaper ⊑ Paper
+Paper ⊑ Document
+NonAcademicEvent ≡ Activity_before_conference
+Conference_city : Cancun
+ConferenceSession ⊑ ¬Document
+ConferenceDinner ⊑ MealEvent
+hasRelatedPaper ≡ is_held_before
+
+CS <21>
+Activity_after_conference ⊑ ∃is_held_after.Conference_days
+Trip_city : Chichen_Itza
+∃hasMenu ⊑ MealMenu
+Full_day_tour ⊑ Activity_after_conference
+ConferenceSession ⊑ ¬Document
+Conference_Hiker ≡ ∃go_through.Full_day_tour
+hasMenu ≡ is_held_after
+MealMenu ⊑ Document
+
+CS <22>
+Activity_after_conference ⊑ ∃is_held_after.Conference_days
+Trip_city : Chichen_Itza
+hasMenu ≡ isMenuOf⁻
+∃isMenuOf ⊑ MealEvent
+AcademicEvent ≡ Activity_after_conference
+Full_day_tour ⊑ Activity_after_conference
+MealEvent ⊑ NonAcademicEvent
+Conference_Hiker ≡ ∃go_through.Full_day_tour
+hasMenu ≡ is_held_after
+Trip_city ⊑ ∃is_visited_by.Conference_Hiker
+
+CS <23>
+Excursion ≡ Full_day_tour
+Trip_city : Chichen_Itza
+Excursion ⊑ SocialEvent
+AcademicEvent ≡ Activity_after_conference
+Full_day_tour ⊑ Activity_after_conference
+Conference_Hiker ≡ ∃go_through.Full_day_tour
+Trip_city ⊑ ∃is_visited_by.Conference_Hiker
+
+CS <24>
+Excursion ⊑ SocialEvent
+Social_program ⊑ Conference_activity
+AcademicEvent ≡ Activity_after_conference
+MealEvent ≡ Conference_activity
+SocialEvent ≡ Social_program
+Conference_Hiker ≡ ∃go_through.Full_day_tour
+Trip_city ⊑ ∃is_visited_by.Conference_Hiker
+Trip_city : Chichen_Itza
+AcademicEvent ⊑ ¬NonAcademicEvent
+Full_day_tour ⊑ Activity_after_conference
+MealEvent ⊑ NonAcademicEvent
+
+CS <25>
+Activity_after_conference ⊑ ∃is_held_after.Conference_days
+Trip_city : Chichen_Itza
+AcademicEvent ⊑ ¬NonAcademicEvent
+AcademicEvent ≡ Activity_after_conference
+Full_day_tour ⊑ Activity_after_conference
+MealEvent ⊑ NonAcademicEvent
+Conference_Hiker ≡ ∃go_through.Full_day_tour
+∃hasMenu ⊑ MealEvent
+hasMenu ≡ is_held_after
+
+CS <26>
+ConferenceSession ≡ Conference_days
+Trip_city : Chichen_Itza
+hasMenu ≡ isMenuOf⁻
+∃isMenuOf ⊑ MealMenu
+Full_day_tour ⊑ Activity_after_conference
+ConferenceSession ⊑ ¬Document
+Conference_Hiker ≡ ∃go_through.Full_day_tour
+hasMenu ≡ is_held_after
+MealMenu ⊑ Document
+Trip_city ⊑ ∃is_visited_by.Conference_Hiker
+
+CS <27>
+Activity_after_conference ⊑ ∃is_held_after.Conference_days
+MealMenu ≡ Payment_document
+ConferenceSession ⊑ ¬Document
+Conference_Hiker ≡ ∃go_through.Full_day_tour
+Trip_city ⊑ ∃is_visited_by.Conference_Hiker
+Payment_document ⊑ Document
+ConferenceSession ≡ Conference_days
+Trip_city : Chichen_Itza
+hasMenu ≡ isMenuOf⁻
+∃isMenuOf ⊑ MealMenu
+Full_day_tour ⊑ Activity_after_conference
+hasMenu ≡ is_held_after
+
+CS <28>
+Document ≡ Document
+Activity_after_conference ⊑ ∃is_held_after.Conference_days
+Conference_Hiker ≡ ∃go_through.Full_day_tour
+Trip_city ⊑ ∃is_visited_by.Conference_Hiker
+Payment_document ⊑ Document
+ConferenceSession ≡ Conference_days
+Trip_city : Chichen_Itza
+∃hasMenu ⊑ MealMenu
+Full_day_tour ⊑ Activity_after_conference
+hasMenu ≡ is_held_after
+
+CS <29>
+Activity_before_conference ⊑ ∃is_held_before.Conference_days
+ConferenceDinner ≡ Conference_city
+hasRelatedPaper ≡ isWrittenBy⁻
+ConferenceEvent ⊑ ¬Person
+NonAcademicEvent ≡ Activity_before_conference
+ConferenceDinner ⊑ MealEvent
+NonAcademicEvent ⊑ ConferenceEvent
+Author ≡ Person ⊓ ∃hasRelatedDocument.Paper
+Conference_city : Cancun
+MealEvent ⊑ NonAcademicEvent
+hasRelatedPaper ≡ is_held_before
+
+CS <30>
+Activity_before_conference ⊑ ∃is_held_before.Conference_days
+hasRelatedPaper ≡ isWrittenBy⁻
+∃isWrittenBy ⊑ Author
+ConferenceEvent ⊑ ¬Person
+NonAcademicEvent ≡ Activity_before_conference
+Conference_state ⊑ ∃is_visited_by.Delegate
+MealEvent ≡ Conference_activity
+NonAcademicEvent ⊑ ConferenceEvent
+Author ≡ Person ⊓ ∃hasRelatedDocument.Paper
+Registration_fee ⊑ ∃is_paid_for.Conference_activity
+Delegate ⊑ ∃pay.Registration_fee
+Conference_state : Mexico
+hasRelatedPaper ≡ is_held_before
+
+CS <31>
+hasRelatedDocument ≡ is_signed_by
+∃hasRelatedDocument ⊑ Document
+Activity_before_conference ⊑ ∃is_held_before.Conference_days
+NonAcademicEvent ≡ Activity_before_conference
+Conference_state ⊑ ∃is_visited_by.Delegate
+MealEvent ≡ Conference_activity
+is_paid_by ≡ pay⁻
+∃providedBy ⊑ Sponsorship
+isProviderOf ≡ is_paid_by
+Record_of_attendance ⊑ ∃is_signed_by.Listener
+∃hasRelatedPaper ⊑ Paper
+Audiovisual_equipment ⊑ ∃is_designed_for.Listener
+isProviderOf ≡ providedBy⁻
+Registration_fee ⊑ ∃is_paid_for.Conference_activity
+Listener ⊑ ∃sign.Record_of_attendance
+Video_cassette_player ⊑ Audiovisual_equipment
+Listener ⊑ Delegate
+MealEvent ⊑ NonAcademicEvent
+Paper ≡ Video_cassette_player
+Delegate ⊑ ∃pay.Registration_fee
+Conference_state : Mexico
+hasRelatedPaper ≡ is_held_before
+
+CS <32>
+Activity_before_conference ⊑ ∃is_held_before.Conference_days
+NonAcademicEvent ≡ Activity_before_conference
+Conference_state ⊑ ∃is_visited_by.Delegate
+MealEvent ≡ Conference_activity
+is_paid_by ≡ pay⁻
+isProviderOf ≡ is_paid_by
+Speaker ⊑ Delegate
+∃hasRelatedPaper ⊑ Paper
+isProviderOf ≡ providedBy⁻
+NumericalReviewQuestion ≡ Speaker
+Registration_fee ⊑ ∃is_paid_for.Conference_activity
+NumericalReviewQuestion ⊑ ReviewQuestion
+Audiovisual_equipment ⊑ ∃is_used_by.Speaker
+ReviewQuestion ⊑ ¬Sponsorship
+Video_cassette_player ⊑ Audiovisual_equipment
+MealEvent ⊑ NonAcademicEvent
+Paper ≡ Video_cassette_player
+Delegate ⊑ ∃pay.Registration_fee
+Conference_state : Mexico
+hasRelatedPaper ≡ is_held_before
+
+CS <33>
+Activity_before_conference ⊑ ∃is_held_before.Conference_days
+NGO ⊑ Organization
+Full_day_tour ⊑ ∃is_held_in.Trip_day
+NonAcademicEvent ≡ Activity_before_conference
+Conference_Hiker ≡ ∃go_through.Full_day_tour
+MealEvent ≡ Conference_activity
+Organization ⊑ ¬Place
+Trip_city ⊑ ∃is_visited_by.Conference_Hiker
+∃hasRelatedPaper ⊑ Paper
+Trip_city : Chichen_Itza
+Registration_fee ⊑ ∃is_paid_for.Conference_activity
+Audiovisual_equipment ⊑ ∃is_situated_in.Session_room
+Place ≡ Place
+Video_cassette_player ⊑ Audiovisual_equipment
+MealEvent ⊑ NonAcademicEvent
+Session_room ⊑ Place
+Paper ≡ Video_cassette_player
+Delegate ⊑ ∃pay.Registration_fee
+Trip_day ⊑ ∃is_designed_for.Delegate
+hasRelatedPaper ≡ is_held_before
+
+CS <34>
+CallForManuscripts ⊑ Call
+Activity_before_conference ⊑ ∃is_held_before.Conference_days
+Call ⊑ ¬Document
+Bank_transfer ⊑ Payment_document
+MealEvent ≡ Conference_activity
+CallForManuscripts ≡ Final_manuscript
+Trip_city ⊑ ∃is_visited_by.Conference_Hiker
+∃hasRelatedPaper ⊑ Paper
+Trip_city : Chichen_Itza
+Call ≡ Bank_transfer
+Video_cassette_player ⊑ Audiovisual_equipment
+MealEvent ⊑ NonAcademicEvent
+Delegate ⊑ ∃pay.Registration_fee
+Trip_day ⊑ ∃is_designed_for.Delegate
+hasRelatedPaper ≡ is_held_before
+MealMenu ≡ Payment_document
+Full_day_tour ⊑ ∃is_held_in.Trip_day
+NonAcademicEvent ≡ Activity_before_conference
+Conference_Hiker ≡ ∃go_through.Full_day_tour
+MealMenu ⊑ Document
+Registration_fee ⊑ ∃is_paid_for.Conference_activity
+Audiovisual_equipment ⊑ ∃is_used_by.Speaker
+Paper ≡ Video_cassette_player
+
+CS <35>
+Speaker ⊑ ∃write.Final_manuscript
+Activity_before_conference ⊑ ∃is_held_before.Conference_days
+Call ⊑ ¬Document
+Bank_transfer ⊑ Payment_document
+MealEvent ≡ Conference_activity
+CallForManuscripts ≡ Final_manuscript
+Trip_city ⊑ ∃is_visited_by.Conference_Hiker
+∃hasRelatedPaper ⊑ Paper
+Trip_city : Chichen_Itza
+Call ≡ Bank_transfer
+Video_cassette_player ⊑ Audiovisual_equipment
+MealEvent ⊑ NonAcademicEvent
+Delegate ⊑ ∃pay.Registration_fee
+Trip_day ⊑ ∃is_designed_for.Delegate
+hasRelatedPaper ≡ is_held_before
+MealMenu ≡ Payment_document
+Full_day_tour ⊑ ∃is_held_in.Trip_day
+NonAcademicEvent ≡ Activity_before_conference
+Conference_Hiker ≡ ∃go_through.Full_day_tour
+MealMenu ⊑ Document
+Registration_fee ⊑ ∃is_paid_for.Conference_activity
+Audiovisual_equipment ⊑ ∃is_used_by.Speaker
+Paper ≡ Video_cassette_player
+
+CS <36>
+ConferenceEvent ⊑ ¬ReviewRating
+Speaker ⊑ ∃write.Final_manuscript
+Final_manuscript ⊑ ∃go_through.Accepting_manuscript
+Activity_before_conference ⊑ ∃is_held_before.Conference_days
+Accepting_manuscript ⊑ Activity_before_conference
+NonAcademicEvent ≡ Activity_before_conference
+Conference_Hiker ≡ ∃go_through.Full_day_tour
+NonAcademicEvent ⊑ ConferenceEvent
+Trip_city ⊑ ∃is_visited_by.Conference_Hiker
+RejectRating ≡ Accepting_manuscript
+∃hasRelatedPaper ⊑ Paper
+Trip_city : Chichen_Itza
+Registration_fee ⊑ ∃is_paid_for.Conference_activity
+Audiovisual_equipment ⊑ ∃is_used_by.Speaker
+RejectRating ⊑ ReviewRating
+Video_cassette_player ⊑ Audiovisual_equipment
+MealEvent ⊑ NonAcademicEvent
+Paper ≡ Video_cassette_player
+Delegate ⊑ ∃pay.Registration_fee
+hasRelatedPaper ≡ is_held_before
+Full_day_tour ⊑ ∃is_designed_for.Delegate
+
+CS <37>
+Speaker ⊑ ∃write.Final_manuscript
+Activity_before_conference ⊑ ∃is_held_before.Conference_days
+Full_day_tour ⊑ ∃is_held_in.Trip_day
+NonAcademicEvent ≡ Activity_before_conference
+Document ⊑ ¬ReviewQuestion
+Conference_Hiker ≡ ∃go_through.Full_day_tour
+relatesTo ≡ write
+∃hasRelatedPaper ⊑ Paper
+Trip_city : Chichen_Itza
+NumericalReviewQuestion ≡ Speaker
+Registration_fee ⊑ ∃is_paid_for.Conference_activity
+NumericalReviewQuestion ⊑ ReviewQuestion
+Audiovisual_equipment ⊑ ∃is_used_by.Speaker
+Video_cassette_player ⊑ Audiovisual_equipment
+MealEvent ⊑ NonAcademicEvent
+Paper ≡ Video_cassette_player
+Delegate ⊑ ∃pay.Registration_fee
+Trip_day ⊑ ∃is_designed_for.Delegate
+hasRelatedPaper ≡ is_held_before
+
+CS <38>
+Activity_before_conference ⊑ ∃is_held_before.Conference_days
+MealEvent ≡ Conference_activity
+Trip_city ⊑ ∃is_visited_by.Conference_Hiker
+∃hasRelatedPaper ⊑ Paper
+Trip_city : Chichen_Itza
+MealEvent ⊑ NonAcademicEvent
+Delegate ⊑ ∃pay.Registration_fee
+hasRelatedPaper ≡ is_held_before
+Full_day_tour ⊑ ∃is_designed_for.Delegate
+Place ⊑ ¬Topic
+AntennasTopic ≡ Record_of_attendance
+NonAcademicEvent ≡ Activity_before_conference
+Conference_Hiker ≡ ∃go_through.Full_day_tour
+Record_of_attendance ⊑ ∃is_situated_in.Session_room
+∃is_situated_in ⊑ Building ⊔ City ⊔ Place
+Country ≡ City
+Audiovisual_equipment ⊑ ∃is_designed_for.Listener
+Registration_fee ⊑ ∃is_paid_for.Conference_activity
+AntennasTopic ⊑ Topic
+Place ≡ Place
+Listener ⊑ ∃sign.Record_of_attendance
+Paper ≡ Video_cassette_player
+
+
